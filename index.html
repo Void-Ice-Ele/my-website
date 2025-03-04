@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Website</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</head>
+<body>
+
+<!-- Sticky Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">🏫 College Name</a>
+        <button class="navbar-toggler" type="button" onclick="toggleNavbar()">☰</button>
+        <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link text-white" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="about.html">About Us</a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link text-white dropdown-toggle" href="#">Courses</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="courses.html">Engineering</a></li>
+                    <li><a class="dropdown-item" href="courses.html">Management</a></li>
+                    <li><a class="dropdown-item" href="courses.html">Science</a></li>
+                </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<header class="hero-section">
+    <div class="hero-content">
+        <h1 class="fade-in">Welcome to Our College</h1>
+        <p class="slide-up">Empowering students for a brighter future</p>
+        <a href="about.html" class="btn btn-primary scale-up">Learn More</a>
+    </div>
+</header>
+<section class="notice-board">
+    <div class="container text-center">
+        <h2>Important Notices</h2>
+        <marquee class="flashy-notice">📢 Admissions open for 2024-25 | 🎓 Convocation on April 15 | 🏆 Sports Day on March 20</marquee>
+    </div>
+</section>
+
+<!-- Events Calendar -->
+<section class="events">
+    <div class="container">
+        <h2 class="text-center">Upcoming Events</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Event</th>
+                    <th>Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>March 10</td>
+                    <td>Guest Lecture on AI</td>
+                    <td>Main Auditorium</td>
+                </tr>
+                <tr>
+                    <td>March 20</td>
+                    <td>Sports Day</td>
+                    <td>Sports Ground</td>
+                </tr>
+                <tr>
+                    <td>April 15</td>
+                    <td>Annual Convocation</td>
+                    <td>College Hall</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- College Section -->
+<section class="college-info">
+    <div class="container text-center">
+        <h2>About Our College</h2>
+        <p class="slide-up">Our college offers world-class education, research facilities, and a vibrant campus life.</p>
+        <img src="assets/images/campus.jpg" class="img-fluid rounded shadow" alt="College Campus">
+    </div>
+</section>
+<section class="courses">
+    <div class="container">
+        <h2 class="text-center">Our Popular Courses</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card hover-effect">
+                    <img src="assets/images/engineering.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Engineering</h5>
+                        <p class="card-text">Top-quality education with real-world applications.</p>
+                        <a href="courses.html" class="btn btn-info">Explore</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card hover-effect">
+                    <img src="assets/images/management.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Management</h5>
+                        <p class="card-text">Enhancing leadership and business skills.</p>
+                        <a href="courses.html" class="btn btn-info">Explore</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card hover-effect">
+                    <img src="assets/images/science.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Science</h5>
+                        <p class="card-text">Innovative research and hands-on learning.</p>
+                        <a href="courses.html" class="btn btn-info">Explore</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="gallery">
+    <div class="container text-center">
+        <h2>College Gallery</h2>
+        <div class="row">
+            <div class="col-md-4"><img src="assets/images/gallery1.jpg" class="img-fluid rounded"></div>
+            <div class="col-md-4"><img src="assets/images/gallery2.jpg" class="img-fluid rounded"></div>
+            <div class="col-md-4"><img src="assets/images/gallery3.jpg" class="img-fluid rounded"></div>
+        </div>
+    </div>
+</section>
+
+<!-- Video Section -->
+<section class="video-section text-center">
+    <div class="container">
+        <h2>Campus Tour</h2>
+        <p>Watch this video to explore our beautiful campus and facilities.</p>
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe width="560" height="315" src="https://youtu.be/mcp3o3CveG4" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials">
+    <div class="container text-center">
+        <h2>What Our Students Say</h2>
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <p>"This college gave me the best years of my life!"</p>
+                    <h5>- John Doe</h5>
+                </div>
+                <div class="carousel-item">
+                    <p>"Amazing faculty and great campus facilities!"</p>
+                    <h5>- Jane Smith</h5>
+                </div>
+                <div class="carousel-item">
+                    <p>"The best learning experience I could have asked for."</p>
+                    <h5>- Rahul Verma</h5>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<script src="assets/js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
