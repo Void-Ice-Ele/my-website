@@ -1,0 +1,81 @@
+/* Hero Section */
+.navbar {
+    background-color: #343a40;
+}
+.hero-section {
+    background: url("../image/OIP.jpeg") no-repeat center;
+    background-size: cover;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+/* Flashy Notice */
+.flashy-notice {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: red;
+    animation: blink 1s infinite alternate;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+/* Events */
+.events {
+    padding: 50px 0;
+}
+
+/* Gallery */
+.gallery {
+    padding: 50px 0;
+}
+
+.gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+/* College Info */
+.college-info {
+    padding: 60px 0;
+}
+
+/* Video Section */
+.video-section {
+    padding: 60px 0;
+}
+
+/* Testimonials */
+.testimonials {
+    background: #f8f9fa;
+    padding: 50px 0;
+}
+
+.testimonials .carousel-item {
+    font-size: 1.2rem;
+    padding: 20px;
+}
+.hover-effect {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-effect:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+
