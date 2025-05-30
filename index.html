@@ -7,6 +7,46 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 9999;
+}
+.popup-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 320px;
+  margin: 100px auto;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  animation: bounceIn 0.7s ease forwards;
+}
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) translateY(-200px);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.05) translateY(20px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+.close-btn {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+</style>
+
+  <style>
     /* Global Styles */
     * { box-sizing: border-box; }
     body {
@@ -328,6 +368,17 @@
   </script>
 </head>
 <body>
+<!-- Popup Modal -->
+<div id="myPopup" class="popup-overlay">
+  <div class="popup-content animated">
+    <span class="close-btn">&times;</span>
+    <h2>Welcome!</h2>
+    <p>This popup appears 3 seconds after loading with animation and sound.</p>
+  </div>
+</div>
+
+<!-- Audio -->
+<audio id="popupSound" src="https://www.soundjay.com/buttons/sounds/button-3.mp3" preload="auto"></audio>
 
   <!-- Header with Demo Logo -->
   <header>
@@ -528,7 +579,30 @@
   <button id="back-to-top">↑ Top</button>
 
   <!-- Scripts -->
-  <script src="https://github.com/Void-Ice-Ele/my-website/popup.js"></script>
+ <script>
+window.onload = function () {
+  setTimeout(function () {
+    const popup = document.getElementById("myPopup");
+    const sound = document.getElementById("popupSound");
+
+    popup.style.display = "block";
+    sound.play();
+  }, 3000);
+};
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelector(".close-btn").onclick = function () {
+    document.getElementById("myPopup").style.display = "none";
+  };
+
+  window.onclick = function (e) {
+    if (e.target === document.getElementById("myPopup")) {
+      document.getElementById("myPopup").style.display = "none";
+    }
+  };
+});
+</script>
+
   <script>
     // Scroll Reveal using Intersection Observer
     document.addEventListener("DOMContentLoaded", function() {
