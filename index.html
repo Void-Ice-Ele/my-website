@@ -7,6 +7,37 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
+  .menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+  }
+
+  @media (max-width: 768px) {
+    nav ul {
+      display: none;
+      flex-direction: column;
+      background: #800000;
+      padding: 10px;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+    }
+
+    nav ul.show {
+      display: flex;
+    }
+
+    .menu-toggle {
+      display: block;
+      margin-left: auto;
+    }
+  }
+</style>
+
+  <style>
 .popup-overlay {
   display: none;
   position: fixed;
