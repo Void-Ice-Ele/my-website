@@ -48,38 +48,38 @@
 </style>
   <style>
   .menu-toggle {
-    display: none;
-    position: absolute;
-    right: 15px;
-    top: 15px;
-    cursor: pointer;
-    width: 30px;
-    height: 25px;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  @media (max-width: 768px) {
-    nav ul {
       display: none;
       flex-direction: column;
-      background: #800000;
-      padding: 10px;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 100%;
+      cursor: pointer;
     }
 
-    nav ul.show {
-      display: flex;
+    .menu-toggle span {
+      height: 3px;
+      width: 25px;
+      background: white;
+      margin: 4px 0;
+      transition: all 0.3s ease;
     }
- .menu-toggle span {
-    display: block;
-    height: 4px;
-    background: white;
-    border-radius: 2px;
-    transition: 0.3s;
-  }
+
+    @media (max-width: 768px) {
+      nav {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: #003366;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+      }
+
+      nav.show {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
   }
 </style>
 
