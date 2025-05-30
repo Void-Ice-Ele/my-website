@@ -19,7 +19,8 @@
   background: #fff;
   padding: 20px;
   border-radius: 12px;
-  width: 320px;
+  width: 90%;
+  max-width: 320px;
   margin: 100px auto;
   position: relative;
   box-shadow: 0 10px 25px rgba(0,0,0,0.3);
@@ -45,6 +46,37 @@
   cursor: pointer;
 }
 </style>
+  <style>
+  .menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+  }
+
+  @media (max-width: 768px) {
+    nav ul {
+      display: none;
+      flex-direction: column;
+      background: #800000;
+      padding: 10px;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+    }
+
+    nav ul.show {
+      display: flex;
+    }
+
+    .menu-toggle {
+      display: block;
+      margin-left: auto;
+    }
+  }
+</style>
+
 
   <style>
     /* Global Styles */
@@ -296,8 +328,21 @@
     
     /* Responsive Adjustments */
     @media (max-width: 768px) {
+      header {
+    flex-direction: column;
+    text-align: center;
+  }
+  header img {
+    margin-bottom: 10px;
+  }
       .card-container { grid-template-columns: 1fr; }
       .flex-item { flex-basis: 100%; }
+      #home h2 {
+    font-size: 28px;
+  }
+  #home p {
+    font-size: 16px;
+  }
     }
   </style>
   <script>
@@ -390,6 +435,7 @@
 
   <!-- Navigation -->
   <nav>
+    <span class="menu-toggle">&#9776;</span>
     <ul>
       <li><a href="#home">Home</a></li>
       <li><a href="#about-notice">About & Notices</a></li>
@@ -671,5 +717,16 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.querySelector(".menu-toggle");
+    const navList = document.querySelector("nav ul");
+
+    toggle.addEventListener("click", () => {
+      navList.classList.toggle("show");
+    });
+  });
+</script>
+
 </body>
 </html>
