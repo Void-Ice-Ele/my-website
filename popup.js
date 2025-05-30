@@ -4,7 +4,8 @@ const popupHTML = `
   <div class="popup-content animated">
     <span class="close-btn">&times;</span>
     <h2>Welcome!</h2>
-    <p>This popup appears 3 seconds after loading with animation and sound.</p>
+     <p>For New Admission Enquery !!</p>
+    <a href="https://forms.gle/5ZLGw6idH5mJsV8T8"><button style="background-color: aqua;"> Click Here </button></a>
   </div>
 </div>
 <audio id="popupSound" src="https://www.soundjay.com/buttons/sounds/button-3.mp3" preload="auto"></audio>
