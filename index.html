@@ -5,8 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Vidya Education Group</title>
   <!-- Google Fonts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
+            .notice-container {
+            transition: max-height 0.3s ease-out;
+            overflow: hidden;
+        }
+        .highlighted-notice {
+            border-left: 4px solid #ef4444;
+            background-color: #fef2f2;
+        }
+    .pdf-icon {
+            color: #ef4444;
+        }
+        @media (max-width: 768px) {
+            .sections-container {
+                flex-direction: column;
+            }
+        }
+
   .menu-toggle {
     display: none;
     font-size: 24px;
@@ -420,7 +439,7 @@
     });
   </script>
 </head>
-<body>
+<body class="bg-gray-50 min-h-screen p-6">
 <!-- Popup Modal -->
 <!-- <div id="myPopup" class="popup-overlay">
   <div class="popup-content animated">
@@ -465,14 +484,14 @@
     </div>
   </section>
 
-  <!-- About & Notices Section Side-by-Side -->
-  <div class="flex-container">
+<!--   <!-- About & Notices Section Side-by-Side -->
+<!--   <div class="flex-container">
     <!-- About Section -->
-    <div id="about-notice" class="animated-section flex-item" style="background: #fff; color: #800000;">
+<!--     <div id="about-notice" class="animated-section flex-item" style="background: #fff; color: #800000;">
       <h2>About Us</h2>
       <p>Vidya Education Group Polytechnic College runs Under the Vidya Education Trust</p>
       <p>Polytechnic is dedicated to quality education and holistic development. Our experienced faculty and modern facilities empower students to achieve their dreams.</p>
-    </div>
+    </div> --> -->
     <!-- Notices Section -->
 <!--     <div id="notices" class="animated-section flex-item" style="background: #fff; color: #800000;">
       <div class="section-marquee"><div>📣 Latest Notices: Stay Updated with Important Announcements 📣</div></div>
@@ -490,9 +509,96 @@
           <h3>Holiday List 2025</h3>
           <p class="hidden-detail">Complete academic holiday calendar. <a href="#">Download PDF</a></p>
         </div> -->
-      </div>
+<!--       </div>
     </div>
-  </div>
+  </div> --> -->
+     <div class="max-w-6xl mx-auto">
+        <h1 class="text-3xl font-bold text-gray-800 mb-8 text-center">Welcome to Vidya Education Group Polytechnic College</h1>
+        
+        <div class="sections-container flex flex-col md:flex-row gap-6 mb-8">
+            <!-- About Section -->
+            <div class="about-section bg-white rounded-lg shadow-md p-6 flex-1">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4 border-b pb-2">About Us</h2>
+                <div class="flex items-start mb-4">
+                    <img src="https://placehold.co/200x150" alt="Modern office building with glass facade and green spaces in front" class="rounded-lg mr-4 w-1/3">
+                    <div>
+                        <p class="text-gray-700 mb-3">We are a dedicated team of professionals committed to delivering excellence in our field. Vidya Education Group Polytechnic College runs Under the Vidya Education Trust</p>
+                        <p class="text-gray-700 mb-3">Polytechnic is dedicated to quality education and holistic development. Our experienced faculty and modern facilities empower students to achieve their dreams.</p>
+                    </div>
+                </div>
+<!--                 <div class="achievements mt-4">
+                    <h3 class="text-lg font-medium text-gray-700 mb-2">Our Achievements</h3>
+                    <ul class="list-disc pl-5 text-gray-600 space-y-1">
+                        <li>Winner of Industry Excellence Award 2022</li>
+                        <li>Served over 10,000 satisfied clients worldwide</li>
+                        <li>Recognized as a Great Place to Work 3 years running</li>
+                    </ul>
+                </div> -->
+            </div>
+            
+            <!-- Notice Section -->
+            <div class="notice-section bg-white rounded-lg shadow-md p-6 flex-1">
+                <div class="flex justify-between items-center mb-4 border-b pb-2">
+                    <h2 class="text-2xl font-semibold text-gray-800">Notices</h2>
+                    <button id="viewAllBtn" class="text-blue-600 hover:text-blue-800 text-sm font-medium">View All Notices</button>
+                </div>
+                
+                <div class="notice-container" id="noticeContainer">
+                    <!-- Highlighted Notice -->
+                    <div class="highlighted-notice mb-4 p-4 rounded-lg">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-medium text-gray-800">Result Update</h3>
+                                <p class="text-sm text-gray-500 mb-2">Posted on: 19th August 2025</p>
+                            </div>
+                            <i class="fas fa-file-pdf pdf-icon text-xl"></i>
+                        </div>
+                        <p class="text-gray-700 text-sm">Result of Polytechnic Entrance Exam. Please review the attached document for details.</p>
+                        <a href="Results.pdf" target="_blank" class="inline-block mt-2 text-blue-600 hover:text-blue-800 text-sm">View PDF</a>
+                    </div>
+                    
+                    <!-- Hidden Notices -->
+                    <div class="hidden-notices">
+                        <div class="notice-item mb-4 p-4 rounded-lg border border-gray-100">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="font-medium text-gray-800">Holiday Notification</h3>
+                                    <p class="text-sm text-gray-500 mb-2">Posted on: 10th June 2023</p>
+                                </div>
+                                <i class="fas fa-file-pdf pdf-icon text-xl"></i>
+                            </div>
+                            <p class="text-gray-700 text-sm">The institution will remain closed on 21st June 2023 on account of public holiday.</p>
+                            <a href="https://example.com/holiday.pdf" target="_blank" class="inline-block mt-2 text-blue-600 hover:text-blue-800 text-sm">View PDF</a>
+                        </div>
+                        
+                        <div class="notice-item mb-4 p-4 rounded-lg border border-gray-100">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="font-medium text-gray-800">Seminar Announcement</h3>
+                                    <p class="text-sm text-gray-500 mb-2">Posted on: 5th June 2023</p>
+                                </div>
+                                <i class="fas fa-link text-blue-500 text-xl"></i>
+                            </div>
+                            <p class="text-gray-700 text-sm">Join us for an interactive seminar on "Emerging Technologies in Education" on 25th June at the main auditorium.</p>
+                            <a href="#" class="inline-block mt-2 text-blue-600 hover:text-blue-800 text-sm">More Details</a>
+                        </div>
+                        
+                        <div class="notice-item mb-4 p-4 rounded-lg border border-gray-100">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="font-medium text-gray-800">Library Timings Change</h3>
+                                    <p class="text-sm text-gray-500 mb-2">Posted on: 1st June 2023</p>
+                                </div>
+                                <i class="fas fa-link text-blue-500 text-xl"></i>
+                            </div>
+                            <p class="text-gray-700 text-sm">Please note new library timings will be effective from 5th June: 8 AM to 7 PM Monday-Saturday.</p>
+                            <a href="#" class="inline-block mt-2 text-blue-600 hover:text-blue-800 text-sm">More Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
   <!-- Courses Section with Hover Reveal Cards -->
   <section id="courses" class="animated-section" style="background: #f0f0ff; color: #800000;">
@@ -634,7 +740,32 @@
   
   <!-- Back-to-Top Button -->
   <button id="back-to-top">↑ Top</button>
-
+  <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const viewAllBtn = document.getElementById('viewAllBtn');
+            const hiddenNotices = document.querySelector('.hidden-notices');
+            const noticeContainer = document.getElementById('noticeContainer');
+            
+            let noticesVisible = false;
+            
+            viewAllBtn.addEventListener('click', function() {
+                noticesVisible = !noticesVisible;
+                
+                if (noticesVisible) {
+                    hiddenNotices.style.display = 'block';
+                    viewAllBtn.textContent = 'Hide Notices';
+                    noticeContainer.style.maxHeight = noticeContainer.scrollHeight + 'px';
+                } else {
+                    hiddenNotices.style.display = 'none';
+                    viewAllBtn.textContent = 'View All Notices';
+                    noticeContainer.style.maxHeight = '';
+                }
+            });
+            
+            // Initialize with notices hidden
+            hiddenNotices.style.display = 'none';
+        });
+    </script>
   <!-- Scripts -->
  <script>
 window.onload = function () {
@@ -739,6 +870,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 </body>
 </html>
+
 
 
 
