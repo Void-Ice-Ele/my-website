@@ -1,0 +1,2052 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vidya Education Group — Diploma Engineering, Patna</title>
+<meta name="description" content="Vidya Education Group — AICTE-format diploma engineering programmes in Civil, Mechanical, Electrical, Electronics, Computer Science and Mining Engineering.">
+<meta property="og:title" content="Vidya Education Group">
+<meta property="og:description" content="Diploma engineering education in Patna, Bihar since 1985.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%2316305C'/%3E%3Ccircle cx='50' cy='50' r='38' fill='none' stroke='%23E8A33D' stroke-width='3'/%3E%3Ctext x='50' y='58' text-anchor='middle' font-family='Georgia,serif' font-weight='700' font-size='26' fill='%23E8A33D'%3EVEG%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script type="application/ld+json" id="ldjson"></script>
+<style>
+  :root{
+    --navy:#16305C; --navy-dark:#0E1F3D; --marigold:#E8A33D; --marigold-dark:#C77F1D;
+    --paper:#F6F3EC; --paper-dark:#EAE4D3; --ink:#201D1A; --ink-soft:#544F46;
+    --leaf:#1F7A4D; --brick:#A6432E; --line:rgba(22,48,92,0.16);
+    --shadow:0 2px 14px rgba(22,48,92,0.10); --shadow-lg:0 12px 32px rgba(14,31,61,0.22); --radius:6px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;overflow-x:hidden;width:100%;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.55;overflow-x:hidden;width:100%;word-wrap:break-word;overflow-wrap:break-word;}
+  h1,h2,h3,h4{font-family:'Lora',serif;color:var(--navy);margin:0 0 .4em 0;line-height:1.2;}
+  p{margin:0 0 1em 0;}
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  button{font-family:inherit;cursor:pointer;}
+  code{background:var(--paper-dark);padding:1px 6px;border-radius:3px;font-size:.9em;}
+  .container{max-width:1120px;margin:0 auto;padding:0 24px;}
+  .eyebrow{display:inline-block;font-family:'Inter',sans-serif;font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--marigold-dark);margin-bottom:10px;}
+  :focus-visible{outline:3px solid var(--marigold);outline-offset:2px;}
+  .skip-link{position:absolute;left:-999px;top:0;background:var(--navy);color:#fff;padding:12px 20px;z-index:999;border-radius:0 0 6px 0;font-weight:700;}
+  .skip-link:focus{left:0;}
+  @media (prefers-reduced-motion: reduce){ *{animation:none !important;transition:none !important;} html{scroll-behavior:auto;} }
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease, transform .65s ease;}
+  .reveal.in-view{opacity:1;transform:translateY(0);}
+
+  .seal{border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;position:relative;}
+  .seal svg{width:100%;height:100%;}
+  .seal-spin{animation:seal-in 900ms ease-out;}
+  @keyframes seal-in{from{transform:rotate(-25deg) scale(.85);opacity:0;}to{transform:rotate(0) scale(1);opacity:1;}}
+  .corner-mark{position:absolute;width:22px;height:22px;border:2px solid rgba(232,163,61,.65);}
+  .corner-mark.tl{top:-10px;left:-10px;border-right:none;border-bottom:none;}
+  .corner-mark.tr{top:-10px;right:-10px;border-left:none;border-bottom:none;}
+  .corner-mark.bl{bottom:-10px;left:-10px;border-right:none;border-top:none;}
+  .corner-mark.br{bottom:-10px;right:-10px;border-left:none;border-top:none;}
+
+  .ticker-bar{background:var(--marigold);border-bottom:1px solid var(--marigold-dark);overflow:hidden;position:relative;}
+  .ticker-bar .container{display:flex;align-items:center;gap:14px;padding:8px 24px;}
+  .ticker-tag{background:var(--navy-dark);color:#fff;font-size:10.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:3px 10px;border-radius:20px;flex-shrink:0;}
+  .ticker-viewport{overflow:hidden;flex:1;white-space:nowrap;}
+  .ticker-track{display:inline-block;padding-left:100%;animation:ticker-scroll 26s linear infinite;color:var(--navy-dark);font-size:13.5px;font-weight:600;}
+  .ticker-bar:hover .ticker-track{animation-play-state:paused;}
+  @keyframes ticker-scroll{from{transform:translateX(0);}to{transform:translateX(-100%);}}
+  .ticker-track a{margin-right:48px;color:inherit;text-decoration:none;border-bottom:1px dashed rgba(14,31,61,.4);padding-bottom:1px;}
+  .ticker-track a:hover{border-bottom-style:solid;}
+
+  header.site-header{background:var(--paper);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50;}
+  .trust-strip{background:#fff;border-bottom:1px solid var(--line);}
+  .trust-strip .container{display:flex;flex-wrap:wrap;gap:8px 26px;justify-content:center;padding:9px 24px;}
+  .trust-badge{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--ink-soft);letter-spacing:.01em;}
+  .trust-badge svg{width:14px;height:14px;color:var(--leaf);flex-shrink:0;}
+  .header-row{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;gap:16px;}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;}
+  .brand .seal{width:44px;height:44px;}
+  .brand-text .name{font-family:'Lora',serif;font-weight:700;font-size:18px;color:var(--navy);}
+  .brand-text .tagline{font-size:11.5px;color:var(--ink-soft);}
+  nav.main-nav{display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
+  nav.main-nav a{font-size:14px;font-weight:600;text-decoration:none;color:var(--ink);border-bottom:2px solid transparent;padding-bottom:3px;transition:color .15s ease, border-color .15s ease;}
+  nav.main-nav a:hover{border-bottom-color:var(--marigold);}
+  nav.main-nav a.active{color:var(--navy);border-bottom-color:var(--marigold);}
+  .nav-cta{background:var(--navy);color:#fff !important;padding:9px 16px;border-radius:3px;border-bottom:none !important;}
+  .nav-cta:hover{background:var(--navy-dark);}
+  #navToggle{display:none;background:none;border:2px solid var(--navy);border-radius:4px;width:40px;height:36px;z-index:57;position:relative;}
+  #navToggle span{display:block;width:18px;height:2px;background:var(--navy);margin:4px auto;}
+  .nav-close{display:none;}
+  .nav-backdrop{display:none;}
+  @media (max-width:1000px){
+    nav.main-nav{position:fixed;top:0;right:-300px;height:100vh;width:280px;background:#fff;flex-direction:column;align-items:stretch;padding:84px 26px 26px;gap:6px;box-shadow:-8px 0 28px rgba(14,31,61,.22);transition:right .32s ease;z-index:58;overflow-y:auto;}
+    nav.main-nav a{padding:12px 4px;border-bottom:1px solid var(--line);}
+    nav.main-nav.open{right:0;}
+    nav.main-nav .nav-cta{margin-top:10px;text-align:center;}
+    #navToggle{display:block;}
+    .nav-close{display:block;position:absolute;top:16px;right:20px;z-index:59;background:none;border:none;font-size:26px;color:var(--navy);}
+    .nav-backdrop{display:block;position:fixed;inset:0;background:rgba(14,31,61,.45);opacity:0;visibility:hidden;transition:opacity .3s ease;z-index:56;}
+    .nav-backdrop.open{opacity:1;visibility:visible;}
+  }
+
+  .hero{background:linear-gradient(180deg,var(--navy) 0%,var(--navy-dark) 100%);color:#fff;padding:64px 0 0;position:relative;overflow:hidden;}
+  .hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:34px 34px;pointer-events:none;}
+  .hero-inner{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center;padding-bottom:48px;position:relative;}
+  @media (max-width:760px){
+    .hero-inner{grid-template-columns:1fr;text-align:center;gap:28px;}
+    .hero .lede{margin-left:auto;margin-right:auto;}
+    .hero-ctas{justify-content:center;}
+    .hero-seal-wrap .seal{width:130px;height:130px;}
+  }
+  .hero h1{color:#fff;font-size:42px;margin-bottom:16px;}
+  .hero .lede{color:#D9E1EE;font-size:17px;max-width:520px;margin-bottom:26px;}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{display:inline-block;padding:12px 22px;border-radius:3px;font-weight:700;font-size:14.5px;text-decoration:none;border:2px solid transparent;transition:transform .15s ease, box-shadow .15s ease;}
+  .btn:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg);}
+  .btn-primary{background:var(--marigold);color:var(--navy-dark);}
+  .btn-primary:hover{background:var(--marigold-dark);color:#fff;}
+  .btn-outline{border-color:rgba(255,255,255,.55);color:#fff;background:transparent;}
+  .btn-outline:hover{background:rgba(255,255,255,.12);}
+  .hero-seal-wrap{display:flex;justify-content:center;position:relative;}
+  .hero-seal-wrap .seal{width:190px;height:190px;}
+  .stat-strip{background:var(--navy-dark);border-top:1px solid rgba(255,255,255,.12);}
+  .stat-row{display:flex;justify-content:space-between;padding:22px 0;flex-wrap:wrap;gap:18px;}
+  .stat{text-align:center;flex:1;min-width:120px;}
+  .stat .num{font-family:'Lora',serif;font-weight:700;font-size:24px;color:var(--marigold);}
+  .stat .label{font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:#B9C4D8;margin-top:2px;}
+
+  section{padding:72px 0;}
+  .section-head{max-width:640px;margin-bottom:40px;}
+  .section-head p{color:var(--ink-soft);font-size:15.5px;}
+
+  .quicklinks-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;}
+  .quicklink-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px 10px;text-align:center;text-decoration:none;color:var(--navy);font-size:12px;font-weight:700;box-shadow:var(--shadow);transition:transform .2s ease, box-shadow .2s ease;}
+  .quicklink-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);}
+  .quicklink-card svg{width:24px;height:24px;margin:0 auto 8px;display:block;color:var(--brick);}
+  @media (max-width:880px){.quicklinks-grid{grid-template-columns:repeat(3,1fr);}}
+  @media (max-width:520px){.quicklinks-grid{grid-template-columns:repeat(2,1fr);}}
+
+  .leader-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .leader-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;box-shadow:var(--shadow);text-align:center;transition:transform .2s ease, box-shadow .2s ease;}
+  .leader-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);}
+  .leader-photo{width:96px;height:96px;border-radius:50%;margin:0 auto 14px;overflow:hidden;background:var(--navy);border:3px solid var(--paper-dark);display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Lora',serif;font-weight:700;font-size:28px;}
+  .leader-photo img{width:100%;height:100%;object-fit:cover;}
+  .leader-name{font-weight:700;font-size:15.5px;color:var(--navy);margin-top:2px;}
+  .leader-title{font-size:12px;color:var(--marigold-dark);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px;}
+  .leader-message{font-size:14px;color:var(--ink-soft);text-align:left;margin-bottom:0;}
+  .vision-mission{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:28px;}
+  .vm-card{background:#fff;border:1px solid var(--line);border-left:4px solid var(--leaf);border-radius:var(--radius);padding:20px 22px;transition:transform .2s ease, box-shadow .2s ease;}
+  .vm-card:hover{transform:translateY(-3px);box-shadow:var(--shadow);}
+  .vm-card h4{font-size:15px;text-transform:uppercase;letter-spacing:.06em;color:var(--leaf);}
+  .vm-card p{color:var(--ink-soft);font-size:14.5px;margin-bottom:0;}
+  @media (max-width:880px){.leader-grid{grid-template-columns:1fr 1fr;}}
+  @media (max-width:720px){.vision-mission{grid-template-columns:1fr;}}
+  @media (max-width:560px){.leader-grid{grid-template-columns:1fr;}}
+
+  .achieve-list{display:flex;flex-direction:column;gap:14px;}
+  .achieve-row{display:flex;gap:20px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;box-shadow:var(--shadow);}
+  .achieve-year{font-family:'Lora',serif;font-weight:700;font-size:20px;color:var(--marigold-dark);min-width:70px;flex-shrink:0;}
+  .achieve-title{font-weight:700;font-size:15px;color:var(--navy);}
+  .achieve-desc{font-size:13.5px;color:var(--ink-soft);margin-top:4px;}
+
+  .course-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .course-card{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px 22px;overflow:hidden;box-shadow:var(--shadow);transition:transform .22s ease, box-shadow .22s ease;}
+  .course-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);}
+  .course-card .code-mark{position:absolute;right:-6px;top:-16px;font-family:'Lora',serif;font-weight:700;font-size:76px;color:var(--paper-dark);z-index:0;user-select:none;}
+  .course-card .code-tag{display:inline-block;background:var(--navy);color:#fff;font-size:11.5px;font-weight:700;letter-spacing:.06em;padding:3px 10px;border-radius:20px;position:relative;z-index:1;margin-bottom:10px;}
+  .course-card h3{font-size:18px;position:relative;z-index:1;}
+  .course-card .meta{font-size:12.5px;color:var(--ink-soft);font-weight:600;margin-bottom:10px;position:relative;z-index:1;}
+  .course-card p{font-size:14px;color:var(--ink-soft);position:relative;z-index:1;margin:0;}
+  @media (max-width:880px){.course-grid{grid-template-columns:1fr 1fr;}}
+  @media (max-width:560px){.course-grid{grid-template-columns:1fr;}}
+
+  .admissions{background:var(--navy);color:#fff;border-radius:var(--radius);padding:40px;position:relative;overflow:hidden;}
+  .admissions .eyebrow{color:var(--marigold);}
+  .admissions h2{color:#fff;}
+  .admissions .disclaimer{font-size:12px;color:#B9C4D8;font-style:italic;margin-top:18px;}
+  .timeline{list-style:none;margin:22px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:14px;}
+  .timeline li{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);border-radius:4px;padding:16px 14px;transition:background .2s ease;}
+  .timeline li:hover{background:rgba(255,255,255,.14);}
+  .timeline .t-date{font-weight:700;color:var(--marigold);font-size:13.5px;}
+  .timeline .t-label{font-size:12.5px;color:#D9E1EE;margin-top:4px;}
+  .admit-eligibility{margin-top:26px;font-size:14.5px;color:#D9E1EE;max-width:640px;}
+  @media (max-width:880px){.timeline{grid-template-columns:repeat(2,1fr);} .admissions{padding:28px 20px;}}
+
+  .cal-list{display:flex;flex-direction:column;gap:12px;}
+  .cal-row{display:flex;align-items:center;gap:18px;background:#fff;border:1px solid var(--line);border-left:4px solid var(--ink-soft);border-radius:4px;padding:14px 18px;flex-wrap:wrap;}
+  .cal-date{font-weight:700;color:var(--navy);font-size:13.5px;min-width:170px;}
+  .cal-body{flex:1;min-width:200px;}
+  @media (max-width:480px){
+    .cal-date{min-width:0;width:100%;}
+    .cal-body{min-width:0;width:100%;}
+  }
+  .cal-title{font-weight:600;font-size:14.5px;}
+  .cal-desc{font-size:13px;color:var(--ink-soft);margin-top:2px;}
+  .cal-tag{color:#fff;font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:4px 10px;border-radius:20px;flex-shrink:0;}
+
+  .placement-stat{text-align:center;background:var(--navy);color:#fff;border-radius:var(--radius);padding:28px;margin-bottom:28px;}
+  .placement-stat .num{font-family:'Lora',serif;font-size:40px;font-weight:700;color:var(--marigold);}
+  .placement-stat .label{font-size:13px;color:#D9E1EE;text-transform:uppercase;letter-spacing:.06em;margin-top:4px;}
+  .recruiter-grid{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;}
+  .recruiter-chip{display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:24px;padding:10px 18px;font-weight:600;font-size:13.5px;box-shadow:var(--shadow);}
+  .recruiter-chip img{width:22px;height:22px;border-radius:50%;object-fit:cover;}
+
+  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .testi-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;box-shadow:var(--shadow);}
+  .testi-quote-mark{font-family:'Lora',serif;font-size:48px;color:var(--marigold);line-height:1;margin-bottom:-10px;}
+  .testi-quote{font-size:14.5px;color:var(--ink-soft);font-style:italic;}
+  .testi-person{display:flex;align-items:center;gap:12px;margin-top:14px;}
+  .testi-avatar{width:44px;height:44px;border-radius:50%;overflow:hidden;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:14px;font-family:'Lora',serif;flex-shrink:0;}
+  .testi-avatar img{width:100%;height:100%;object-fit:cover;}
+  .testi-name{font-weight:700;font-size:13.5px;color:var(--navy);}
+  .testi-role{font-size:12px;color:var(--ink-soft);}
+  @media (max-width:880px){.testi-grid{grid-template-columns:1fr 1fr;}}
+  @media (max-width:560px){.testi-grid{grid-template-columns:1fr;}}
+
+  .faculty-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .faculty-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;text-align:center;box-shadow:var(--shadow);transition:transform .22s ease, box-shadow .22s ease;}
+  .faculty-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);}
+  .faculty-avatar{width:88px;height:88px;border-radius:50%;margin:0 auto 14px;overflow:hidden;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Lora',serif;font-weight:700;font-size:26px;}
+  .faculty-avatar img{width:100%;height:100%;object-fit:cover;}
+  .faculty-card h4{font-size:15.5px;margin-bottom:2px;}
+  .faculty-card .desig{font-size:13px;color:var(--marigold-dark);font-weight:700;margin-bottom:6px;}
+  .faculty-card .qual{font-size:12.5px;color:var(--ink-soft);}
+  @media (max-width:880px){.faculty-grid{grid-template-columns:1fr 1fr;}}
+  @media (max-width:560px){.faculty-grid{grid-template-columns:1fr;}}
+
+  .noticeboard{background:var(--paper-dark);border:1px solid var(--line);border-radius:var(--radius);padding:36px 30px;}
+  .notice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .notice-card{background:#fffdf7;border:1px solid #e2d9bd;border-radius:2px;padding:18px 18px 20px;box-shadow:0 3px 8px rgba(0,0,0,.08);position:relative;transition:transform .2s ease;}
+  .notice-card:nth-child(odd){transform:rotate(-1deg);}
+  .notice-card:nth-child(even){transform:rotate(1deg);}
+  .notice-card:hover{transform:rotate(0deg) translateY(-3px);}
+  .notice-card::before{content:'';position:absolute;top:-8px;left:50%;transform:translateX(-50%);width:16px;height:16px;border-radius:50%;background:var(--brick);box-shadow:0 2px 3px rgba(0,0,0,.3);}
+  .notice-card:target{outline:3px solid var(--marigold);outline-offset:3px;}
+  .notice-date{font-size:11.5px;font-weight:700;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.04em;}
+  .notice-card h4{font-size:15px;margin:6px 0 8px;}
+  .notice-card p{font-size:13px;color:var(--ink-soft);margin:0;}
+  .notice-important{display:inline-block;background:var(--brick);color:#fff;font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:2px 8px;border-radius:2px;margin-bottom:6px;}
+  .notice-pdf-link{display:inline-block;margin-top:8px;font-size:12.5px;font-weight:700;color:var(--brick);text-decoration:underline;}
+  @media (max-width:880px){.notice-grid{grid-template-columns:1fr 1fr;}}
+  @media (max-width:560px){.notice-grid{grid-template-columns:1fr;}}
+
+  .result-list, .download-list{display:flex;flex-direction:column;gap:10px;}
+  .result-row, .download-row{display:flex;align-items:center;gap:16px;background:#fff;border:1px solid var(--line);border-radius:4px;padding:14px 18px;flex-wrap:wrap;}
+  .rtitle,.dtitle{font-weight:600;font-size:14.5px;}
+  .rmeta,.dcat{font-size:12.5px;color:var(--ink-soft);margin-top:2px;}
+  .pdf-badge{background:var(--brick);color:#fff;font-size:10.5px;font-weight:800;letter-spacing:.04em;padding:5px 9px;border-radius:3px;flex-shrink:0;}
+
+  .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+  .gallery-item{aspect-ratio:1/1;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);background:#fff;cursor:zoom-in;position:relative;}
+  .gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .35s ease;}
+  .gallery-item:hover img{transform:scale(1.07);}
+  .gallery-caption{font-size:11.5px;color:var(--ink-soft);padding:6px 2px 0;}
+  .gallery-empty{border:2px dashed var(--line);border-radius:var(--radius);padding:48px 24px;text-align:center;color:var(--ink-soft);}
+  .gallery-empty a{color:var(--brick);font-weight:700;text-decoration:underline;}
+  @media (max-width:880px){.gallery-grid{grid-template-columns:repeat(2,1fr);}}
+
+  .lightbox-overlay{position:fixed;inset:0;background:rgba(14,31,61,.92);display:flex;align-items:center;justify-content:center;z-index:200;padding:24px;animation:fade-in .2s ease;}
+  @keyframes fade-in{from{opacity:0;}to{opacity:1;}}
+  .lightbox-overlay img{max-width:88vw;max-height:76vh;border-radius:4px;box-shadow:var(--shadow-lg);}
+  .lightbox-caption{color:#D9E1EE;text-align:center;margin-top:14px;font-size:14px;}
+  .lightbox-close{position:absolute;top:22px;right:28px;color:#fff;font-size:30px;background:none;border:none;cursor:pointer;line-height:1;}
+  .lightbox-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);color:#fff;font-size:22px;width:44px;height:44px;border-radius:50%;}
+  .lightbox-nav:hover{background:rgba(255,255,255,.25);}
+  .lightbox-nav.prev{left:20px;}
+  .lightbox-nav.next{right:20px;}
+
+  .committee-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
+  .committee-card{background:#fff;border:1px solid var(--line);border-left:4px solid var(--brick);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);}
+  .committee-card h4{font-size:16px;}
+  .committee-card p{font-size:13.5px;color:var(--ink-soft);}
+  .committee-members{font-size:13px;color:var(--ink-soft);border-top:1px dashed var(--line);margin-top:10px;padding-top:10px;}
+  @media (max-width:720px){.committee-grid{grid-template-columns:1fr;}}
+
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;}
+  .contact-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow);}
+  .contact-card .row{display:flex;gap:12px;margin-bottom:14px;font-size:14.5px;}
+  .contact-card .row .k{font-weight:700;color:var(--navy);min-width:70px;}
+  .map-box{background:var(--paper-dark);border:1px solid var(--line);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;min-height:220px;color:var(--ink-soft);font-size:13.5px;text-align:center;padding:20px;}
+  .enquiry-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px;box-shadow:var(--shadow);margin-top:24px;}
+  .map-embed{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);min-height:220px;}
+  .map-embed iframe{width:100%;height:100%;min-height:220px;display:block;border:0;}
+  @media (max-width:720px){.contact-grid{grid-template-columns:1fr;}}
+
+  footer.site-footer{background:var(--navy-dark);color:#C9D2E2;padding:44px 0 26px;font-size:13.5px;}
+  .footer-row{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;}
+  .footer-col h5{color:#fff;font-family:'Inter',sans-serif;font-size:13px;text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px;}
+  .footer-col a{display:block;color:#C9D2E2;text-decoration:none;margin-bottom:8px;}
+  .footer-social{display:flex;gap:10px;margin-top:14px;}
+  .footer-social a{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);color:#C9D2E2;margin-bottom:0;}
+  .footer-social a:hover{background:var(--marigold);border-color:var(--marigold);color:var(--navy-dark);}
+  .footer-social svg{width:16px;height:16px;}
+  .footer-col a:hover{color:var(--marigold);}
+  .footer-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:28px;padding-top:18px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;color:#8FA0BC;font-size:12px;}
+  .footer-bottom a{color:#8FA0BC;}
+
+  .toast{position:fixed;top:20px;right:20px;z-index:300;max-width:320px;padding:14px 18px;border-radius:6px;font-size:13.5px;font-weight:600;box-shadow:var(--shadow-lg);animation:toast-in .25s ease;}
+  @keyframes toast-in{from{opacity:0;transform:translateY(-10px);}to{opacity:1;transform:translateY(0);}}
+  .toast.success{background:#E4F3EA;color:var(--leaf);border:1px solid #BFE3CD;}
+  .toast.error{background:#FBE7E2;color:var(--brick);border:1px solid #EFC3B6;}
+
+  .loading-screen{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;color:var(--ink-soft);font-family:'Inter',sans-serif;}
+  .loading-seal{width:60px;height:60px;color:var(--navy);animation:spin 1.4s linear infinite;}
+  @keyframes spin{to{transform:rotate(360deg);}}
+
+  .admin-topbar{background:var(--brick);color:#fff;padding:12px 0;position:sticky;top:0;z-index:60;}
+  .admin-topbar .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;}
+  .admin-topbar .lbl{font-weight:700;font-size:13.5px;letter-spacing:.03em;display:flex;align-items:center;gap:8px;}
+  .admin-topbar .lbl svg{width:16px;height:16px;}
+  .admin-topbar .actions a,.admin-topbar .actions button{color:#fff;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.4);padding:7px 14px;border-radius:3px;font-size:13px;font-weight:600;text-decoration:none;margin-left:10px;}
+  .admin-topbar .actions a:hover,.admin-topbar .actions button:hover{background:rgba(255,255,255,.28);}
+  .admin-wrap{max-width:1080px;margin:0 auto;padding:36px 24px 80px;}
+  .login-page{min-height:100vh;background:linear-gradient(180deg,var(--navy) 0%,var(--navy-dark) 100%);position:relative;display:flex;align-items:center;justify-content:center;padding:24px;}
+  .login-page::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:34px 34px;}
+  .login-card{max-width:400px;width:100%;margin:0 auto;background:#fff;border-radius:var(--radius);padding:36px;box-shadow:var(--shadow-lg);text-align:center;position:relative;z-index:1;}
+  .login-card .seal{width:64px;height:64px;margin:0 auto 16px;}
+  .field{margin-bottom:16px;text-align:left;}
+  .field label{display:block;font-size:13px;font-weight:700;color:var(--navy);margin-bottom:6px;}
+  .field input,.field textarea,.field select{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:4px;font-family:inherit;font-size:14px;background:#fff;transition:border-color .15s ease, box-shadow .15s ease;}
+  .field input:focus,.field textarea:focus,.field select:focus{border-color:var(--marigold);box-shadow:0 0 0 3px rgba(232,163,61,.2);outline:none;}
+  .field textarea{resize:vertical;min-height:80px;}
+  .hint{font-size:12px;color:var(--ink-soft);margin-top:6px;}
+  .admin-tabs{display:flex;flex-direction:column;gap:2px;}
+  .admin-tabs button{display:flex;align-items:center;gap:10px;background:none;border:none;border-left:3px solid transparent;padding:11px 14px;font-size:13.5px;font-weight:700;color:var(--ink-soft);text-align:left;border-radius:0 4px 4px 0;}
+  .admin-tabs button svg{width:17px;height:17px;flex-shrink:0;}
+  .admin-tabs button:hover{background:var(--paper);}
+  .admin-tabs button.active{color:var(--brick);border-left-color:var(--brick);background:#fff;box-shadow:var(--shadow);}
+  .admin-shell{display:flex;gap:28px;align-items:flex-start;}
+  .admin-sidebar{width:240px;flex-shrink:0;background:var(--paper-dark);border-radius:var(--radius);padding:10px;position:sticky;top:76px;max-height:calc(100vh - 96px);overflow-y:auto;}
+  .admin-panel{flex:1;min-width:0;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px 28px;}
+  .admin-panel h3{font-size:18px;margin-bottom:4px;display:flex;align-items:center;gap:10px;}
+  .admin-panel .sub{color:var(--ink-soft);font-size:13.5px;margin-bottom:22px;}
+  .last-touched{font-size:11.5px;color:var(--ink-soft);background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:6px 10px;display:inline-block;margin-bottom:18px;}
+  .btn-admin{background:var(--brick);color:#fff;border:none;padding:10px 20px;border-radius:4px;font-weight:700;font-size:13.5px;}
+  .btn-admin:hover{background:#8C3A28;}
+  .btn-ghost{background:none;border:1px solid var(--line);color:var(--ink-soft);padding:9px 16px;border-radius:4px;font-weight:600;font-size:13px;}
+  .btn-ghost:hover{background:var(--paper);}
+  .btn-danger{background:none;border:1px solid #EFC3B6;color:var(--brick);padding:7px 12px;border-radius:4px;font-weight:600;font-size:12.5px;}
+  .btn-danger:hover{background:#FBE7E2;}
+  .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 20px;}
+  .form-grid .full{grid-column:1/-1;}
+  .item-row{display:flex;justify-content:space-between;align-items:center;gap:14px;border:1px solid var(--line);border-radius:4px;padding:14px 16px;margin-bottom:10px;background:var(--paper);flex-wrap:wrap;}
+  .item-row .info{font-size:13.5px;min-width:0;overflow-wrap:break-word;}
+  .item-row .info b{color:var(--navy);}
+  .item-row .btns{display:flex;gap:8px;flex-shrink:0;}
+  .thumb{width:44px;height:44px;border-radius:50%;object-fit:cover;background:var(--navy);flex-shrink:0;}
+  .add-form{border-top:1px dashed var(--line);margin-top:18px;padding-top:18px;}
+  .file-row{display:flex;align-items:center;gap:14px;margin-bottom:16px;}
+  .file-preview{width:60px;height:60px;border-radius:8px;object-fit:cover;background:var(--paper-dark);}
+  .security-note{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--brick);border-radius:4px;padding:16px 18px;font-size:13.5px;color:var(--ink-soft);margin-top:22px;}
+  .security-note h4{font-size:13.5px;color:var(--brick);margin-bottom:6px;text-transform:uppercase;letter-spacing:.04em;}
+  .setup-steps{font-size:13.5px;color:var(--ink-soft);padding-left:20px;line-height:1.9;text-align:left;}
+  @media (max-width:760px){
+    .admin-shell{flex-direction:column;}
+    .admin-sidebar{width:100%;position:static;max-height:none;}
+    .admin-tabs{flex-direction:row;overflow-x:auto;}
+    .admin-tabs button{border-left:none;border-bottom:3px solid transparent;white-space:nowrap;}
+    .admin-tabs button.active{border-left-color:transparent;border-bottom-color:var(--brick);}
+    .form-grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<div id="app"></div>
+
+<script>
+/* ============================================================
+   CONFIGURATION — paste your Supabase project details here.
+   Project Settings -> Data API in your Supabase dashboard.
+   ============================================================ */
+const SUPABASE_URL = "https://mtvhzualkjrpbrwxvfbn.supabase.co";
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im10dmh6dWFsa2pycGJyd3h2ZmJuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODM0MTg2MjUsImV4cCI6MjA5ODk5NDYyNX0.xSj0-PZfuTHWK3zpUSAJT-3X-zYIwAXqX0p658QpGG4";
+const STORAGE_BUCKET = "college-assets";
+/* ============================================================
+   VIDYA EDUCATION GROUP — public site + admin CMS
+   Backed entirely by Supabase: Postgres for data, Supabase Auth
+   for the staff login, and Supabase Storage for photos/PDFs.
+   See the companion supabase-setup.sql for the schema this expects.
+   ============================================================ */
+
+const DEFAULT_INFO = {
+  name: "Vidya Education Group", short_name: "VEG",
+  tagline: "Vidya se Vikas - empowering Bihar's students through quality technical education since 1985",
+  established: "1985", address: "Main Campus: NH-30, Danapur-Bihta Road, Patna, Bihar - 801503",
+  phone: "+91 612 234 5678", email: "info@vidyaeducationgroup.in",
+  students: "1,200+", placement_rate: "82%", logo_url: "", map_url: "",
+  affiliation: "", approval_id: "", facebook_url: "", instagram_url: "", youtube_url: ""
+};
+const DEFAULT_ABOUT = {
+  vision: "To be Bihar's most trusted education group, producing skilled professionals who are ready for industry from their first day on the job.",
+  mission: "We combine rigorous classroom instruction with hands-on training and a placement cell that stays with every student until they find work."
+};
+
+const ICONS = {
+  info: '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="14" height="11"/><path d="M6 7V4h8v3"/><line x1="10" y1="10" x2="10" y2="15"/></svg>',
+  about: '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="7" r="3.2"/><path d="M3.5 17c1-3.5 4-5 6.5-5s5.5 1.5 6.5 5"/></svg>',
+  courses: '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 5.5C8.5 4.3 6 4 3.5 4.3v10.4c2.5-.3 5 0 6.5 1.2"/><path d="M10 5.5C11.5 4.3 14 4 16.5 4.3v10.4c-2.5-.3-5 0-6.5 1.2"/><line x1="10" y1="5.5" x2="10" y2="16"/></svg>',
+  faculty: '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="7" r="2.6"/><circle cx="14" cy="8" r="2.1"/><path d="M2.3 16c.6-2.7 2.6-4 4.7-4s4.1 1.3 4.7 4"/><path d="M11.8 12.3c1.7.2 3.3 1.3 3.8 3.7"/></svg>',
+  notices: '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 15.5V9a5 5 0 0 1 10 0v6.5"/><path d="M3.5 15.5h13"/><path d="M8.3 18a1.9 1.9 0 0 0 3.4 0"/></svg>',
+  gallery: '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4" width="15" height="12" rx="1.2"/><circle cx="7" cy="8.5" r="1.4"/><path d="M17.5 13.5 13 9l-8.5 7"/></svg>',
+  account: '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="9" width="11" height="8" rx="1.2"/><path d="M7 9V6a3 3 0 0 1 6 0v3"/></svg>',
+  results: '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2.5" width="12" height="15" rx="1"/><path d="M7 7h6M7 10h6"/><path d="M7.5 13.5 9 15l3-3"/></svg>',
+  calendar: '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="14" height="12" rx="1.2"/><path d="M3 8h14"/><path d="M6.5 2.8v3M13.5 2.8v3"/></svg>',
+  placements: '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="14" height="9" rx="1.2"/><path d="M7.5 7V5.5a1.5 1.5 0 0 1 1.5-1.5h2a1.5 1.5 0 0 1 1.5 1.5V7"/><path d="M3 11.5h14"/></svg>',
+  downloads: '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3v9"/><path d="M6.5 8.5 10 12l3.5-3.5"/><path d="M3.5 15h13"/></svg>',
+  committees: '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2.5 16 5v4.5c0 4-2.7 6.6-6 8-3.3-1.4-6-4-6-8V5l6-2.5Z"/></svg>',
+  testimonials: '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 6.5h4v4c0 2-1.3 3.3-3.3 3.6"/><path d="M11.5 6.5h4v4c0 2-1.3 3.3-3.3 3.6"/></svg>',
+  achievements: '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3.2l1.8 3.7 4 .6-2.9 2.8.7 4-3.6-1.9-3.6 1.9.7-4-2.9-2.8 4-.6L10 3.2Z"/></svg>',
+  check: '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg>',
+  enquiries: '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5.5h14v9H8l-3.5 3v-3H3z"/><path d="M6.5 8.5h7M6.5 11h4.5"/></svg>',
+  facebook: '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="7.3"/><path d="M11.8 7.2h-1.3c-.7 0-1.2.5-1.2 1.2v1.3H8.2v1.8h1.1V16h1.9v-4.5h1.4l.2-1.8h-1.6V8.6c0-.3.2-.5.5-.5h1.1V7.2Z" fill="currentColor" stroke="none"/></svg>',
+  instagram: '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="13" height="13" rx="3.5"/><circle cx="10" cy="10" r="3"/><circle cx="13.6" cy="6.4" r=".6" fill="currentColor" stroke="none"/></svg>',
+  youtube: '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5.5" width="15" height="9" rx="2.5"/><path d="M8.5 8.3v3.4l3-1.7-3-1.7Z" fill="currentColor" stroke="none"/></svg>'
+};
+
+const SIMPLE_SECTIONS = {
+  results: { table:'results', icon:'results', label:'Results', orderCol:'published_date', ascending:false,
+    fields:[
+      {name:'title', label:'Result title', type:'text', required:true, placeholder:'e.g. 3rd Semester Result - Civil Engineering'},
+      {name:'branch', label:'Branch code', type:'text', placeholder:'e.g. CE'},
+      {name:'semester', label:'Semester', type:'text', placeholder:'e.g. 3rd'},
+      {name:'published_date', label:'Published date', type:'date'}
+    ], file:{name:'pdf_url', label:'Result PDF', kind:'pdf'} },
+  calendar_events: { table:'calendar_events', icon:'calendar', label:'Academic Calendar', orderCol:'event_date', ascending:true,
+    fields:[
+      {name:'title', label:'Event title', type:'text', required:true, placeholder:'e.g. Mid-semester exams begin'},
+      {name:'event_date', label:'Start date', type:'date', required:true},
+      {name:'end_date', label:'End date (optional)', type:'date'},
+      {name:'category', label:'Category', type:'select', options:['Exam','Holiday','Admission','Event','Other']},
+      {name:'description', label:'Details', type:'textarea'}
+    ], file:{name:'pdf_url', label:'Attachment PDF (optional)', kind:'pdf'} },
+  recruiters: { table:'recruiters', icon:'placements', label:'Placements & Recruiters', orderCol:'sort_order', ascending:true,
+    fields:[
+      {name:'company_name', label:'Company name', type:'text', required:true},
+      {name:'sort_order', label:'Display order (lower shows first)', type:'number'}
+    ], file:{name:'logo_url', label:'Logo (optional)', kind:'image'} },
+  downloads: { table:'downloads', icon:'downloads', label:'Downloads', orderCol:'created_at', ascending:false,
+    fields:[
+      {name:'title', label:'Document title', type:'text', required:true, placeholder:'e.g. Admission Prospectus 2026-27'},
+      {name:'category', label:'Category', type:'select', options:['Prospectus','Syllabus','Form','Mandatory Disclosure','Other']}
+    ], file:{name:'pdf_url', label:'PDF file', kind:'pdf', required:true} },
+  committees: { table:'committees', icon:'committees', label:'Committees & Disclosure', orderCol:'created_at', ascending:true,
+    fields:[
+      {name:'name', label:'Committee name', type:'text', required:true, placeholder:'e.g. Anti-Ragging Committee'},
+      {name:'description', label:'Purpose / description', type:'textarea'},
+      {name:'members', label:'Members (one per line)', type:'textarea'}
+    ], file:null },
+  testimonials: { table:'testimonials', icon:'testimonials', label:'Testimonials', orderCol:'created_at', ascending:false,
+    fields:[
+      {name:'name', label:'Name', type:'text', required:true},
+      {name:'role', label:'Role', type:'text', placeholder:'e.g. Alumnus, CSE Batch 2022'},
+      {name:'quote', label:'Quote', type:'textarea', required:true}
+    ], file:{name:'photo_url', label:'Photo (optional)', kind:'image'} },
+  achievements: { table:'achievements', icon:'achievements', label:'Milestones & Achievements', orderCol:'year', ascending:false,
+    fields:[
+      {name:'year', label:'Year', type:'text', required:true, placeholder:'e.g. 2025'},
+      {name:'title', label:'Achievement', type:'text', required:true, placeholder:'e.g. Ranked among top 10 polytechnics in Bihar'},
+      {name:'description', label:'Details (optional)', type:'textarea'}
+    ], file:null },
+  leadership: { table:'leadership', icon:'about', label:'Leadership', orderCol:'sort_order', ascending:true,
+    fields:[
+      {name:'name', label:'Full name', type:'text', required:true},
+      {name:'title', label:'Title / role', type:'text', required:true, placeholder:'e.g. Principal, Director, Secretary'},
+      {name:'message', label:'Message', type:'textarea', required:true, placeholder:"Their message to students and visitors"},
+      {name:'sort_order', label:'Display order (lower shows first)', type:'number'}
+    ], file:{name:'photo_url', label:'Photo', kind:'image'} }
+};
+
+let sb = null;
+let configOK = false;
+let dbErrors = [];
+let dataLoaded = false;
+
+let info = structuredClone(DEFAULT_INFO);
+let about = structuredClone(DEFAULT_ABOUT);
+let courses = [];
+let faculty = [];
+let notices = [];
+let gallery = [];
+let tableData = { results:[], calendar_events:[], recruiters:[], downloads:[], committees:[], testimonials:[], achievements:[], leadership:[], enquiries:[] };
+let siteMeta = { lastUpdated:null };
+
+let session = { isAdmin:false };
+let adminTab = 'info';
+let navOpen = false;
+let flashMsg = null;
+let lightboxIndex = null;
+
+const memoryStorage = (function(){
+  const store = {};
+  return {
+    getItem:(k)=> (k in store ? store[k] : null),
+    setItem:(k,v)=>{ store[k]=v; },
+    removeItem:(k)=>{ delete store[k]; }
+  };
+})();
+
+function initSupabase(){
+  if(!SUPABASE_URL || !SUPABASE_ANON_KEY || SUPABASE_URL.indexOf('YOUR_')===0 || SUPABASE_ANON_KEY.indexOf('YOUR_')===0){
+    configOK = false;
+    return;
+  }
+  try{
+    sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
+      auth: { storage: memoryStorage, persistSession: true, autoRefreshToken: true, detectSessionInUrl: false }
+    });
+    configOK = true;
+  }catch(e){
+    configOK = false;
+  }
+}
+
+async function dbSelectSingleton(table){
+  try{
+    const { data, error } = await sb.from(table).select('*').eq('id',1).maybeSingle();
+    if(error) throw error;
+    return data;
+  }catch(e){ console.error(table, e); dbErrors.push(table + ': ' + (e.message||'failed to load')); return null; }
+}
+async function dbUpdateSingleton(table, payload){
+  try{
+    const { error } = await sb.from(table).update(payload).eq('id',1);
+    if(error) throw error;
+    return true;
+  }catch(e){ console.error(table, e); return false; }
+}
+async function dbSelectList(table, orderCol, ascending){
+  try{
+    let q = sb.from(table).select('*');
+    if(orderCol) q = q.order(orderCol, {ascending: !!ascending});
+    const { data, error } = await q;
+    if(error) throw error;
+    return data || [];
+  }catch(e){ console.error(table, e); dbErrors.push(table + ': ' + (e.message||'failed to load')); return []; }
+}
+async function dbInsert(table, payload){
+  try{
+    const { data, error } = await sb.from(table).insert(payload).select();
+    if(error) throw error;
+    return (data && data[0]) || true;
+  }catch(e){ console.error(table, e); return null; }
+}
+async function dbUpdate(table, id, payload){
+  try{
+    const { error } = await sb.from(table).update(payload).eq('id', id);
+    if(error) throw error;
+    return true;
+  }catch(e){ console.error(table, e); return false; }
+}
+async function dbDelete(table, id){
+  try{
+    const { error } = await sb.from(table).delete().eq('id', id);
+    if(error) throw error;
+    return true;
+  }catch(e){ console.error(table, e); return false; }
+}
+async function touchLastUpdated(){
+  siteMeta = { lastUpdated: new Date().toISOString() };
+}
+
+function compressImageToDataUrl(file, maxDim, quality){
+  return new Promise((resolve, reject)=>{
+    const reader = new FileReader();
+    reader.onload = (e)=>{
+      const img = new Image();
+      img.onload = ()=>{
+        let w = img.width, h = img.height;
+        if(w > h){ if(w > maxDim){ h = Math.round(h * maxDim / w); w = maxDim; } }
+        else { if(h > maxDim){ w = Math.round(w * maxDim / h); h = maxDim; } }
+        const canvas = document.createElement('canvas');
+        canvas.width = w; canvas.height = h;
+        canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+        resolve(canvas.toDataURL('image/jpeg', quality));
+      };
+      img.onerror = ()=>reject(new Error('Could not read that image.'));
+      img.src = e.target.result;
+    };
+    reader.onerror = ()=>reject(new Error('Could not read that file.'));
+    reader.readAsDataURL(file);
+  });
+}
+
+async function uploadToStorage(file, folder, opts){
+  opts = opts || {};
+  if(!file) throw new Error('No file selected.');
+  const isPdf = !!opts.isPdf;
+  if(isPdf){
+    if(file.type !== 'application/pdf') throw new Error('Please choose a PDF file.');
+    if(file.size > 15*1024*1024) throw new Error('That PDF is too large (max 15MB).');
+  } else {
+    if(!file.type || !file.type.startsWith('image/')) throw new Error('Please choose an image file.');
+    if(file.size > 10*1024*1024) throw new Error('That image is too large (max 10MB).');
+  }
+  let blob = file, ext = 'pdf', contentType = 'application/pdf';
+  if(!isPdf){
+    const dataUrl = await compressImageToDataUrl(file, opts.maxDim||700, opts.quality||0.78);
+    blob = await (await fetch(dataUrl)).blob();
+    ext = 'jpg'; contentType = 'image/jpeg';
+  }
+  const path = folder + '/' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2,8) + '.' + ext;
+  const { error } = await sb.storage.from(STORAGE_BUCKET).upload(path, blob, { cacheControl:'3600', upsert:false, contentType });
+  if(error) throw error;
+  const { data } = sb.storage.from(STORAGE_BUCKET).getPublicUrl(path);
+  return data.publicUrl;
+}
+
+async function checkSession(){
+  try{
+    const { data } = await sb.auth.getSession();
+    session.isAdmin = !!(data && data.session);
+  }catch(e){ session.isAdmin = false; }
+}
+async function handleLogin(e){
+  e.preventDefault();
+  const email = e.target.email.value.trim();
+  const pw = e.target.pw.value;
+  try{
+    const { error } = await sb.auth.signInWithPassword({ email, password: pw });
+    if(error) throw error;
+    session.isAdmin = true;
+    adminTab = 'info';
+    pushToast('success','Welcome back.');
+  }catch(err){
+    pushToast('error', err.message || 'Incorrect email or password.');
+  }
+  renderApp();
+  return false;
+}
+async function handleLogout(){
+  try{ await sb.auth.signOut(); }catch(e){}
+  session.isAdmin = false;
+  location.hash = '#home';
+  pushToast('success','You have been logged out.');
+  renderApp();
+}
+async function handleChangePassword(e){
+  e.preventDefault();
+  const f = e.target;
+  if(f.next.value !== f.confirm.value){ pushToast('error','New passwords do not match.'); renderApp(); return false; }
+  if(f.next.value.length < 8){ pushToast('error','New password should be at least 8 characters.'); renderApp(); return false; }
+  try{
+    const { error } = await sb.auth.updateUser({ password: f.next.value });
+    if(error) throw error;
+    pushToast('success','Password updated.');
+  }catch(err){
+    pushToast('error', err.message || 'Could not update password.');
+  }
+  renderApp();
+  return false;
+}
+
+async function loadAll(){
+  dbErrors = [];
+  const [ci, ab, co, fa, no, ga, re, ca, rc, dl, cm, te, ac, ld] = await Promise.all([
+    dbSelectSingleton('college_info'),
+    dbSelectSingleton('about_info'),
+    dbSelectList('courses','created_at',true),
+    dbSelectList('faculty','created_at',true),
+    dbSelectList('notices','notice_date',false),
+    dbSelectList('gallery','created_at',false),
+    dbSelectList('results','published_date',false),
+    dbSelectList('calendar_events','event_date',true),
+    dbSelectList('recruiters','sort_order',true),
+    dbSelectList('downloads','created_at',false),
+    dbSelectList('committees','created_at',true),
+    dbSelectList('testimonials','created_at',false),
+    dbSelectList('achievements','year',false),
+    dbSelectList('leadership','sort_order',true)
+  ]);
+  info = ci || structuredClone(DEFAULT_INFO);
+  about = ab || structuredClone(DEFAULT_ABOUT);
+  courses = co; faculty = fa; notices = no; gallery = ga;
+  tableData = { results:re, calendar_events:ca, recruiters:rc, downloads:dl, committees:cm, testimonials:te, achievements:ac, leadership:ld };
+  await checkSession();
+  dataLoaded = true;
+  injectStructuredData();
+}
+
+function injectStructuredData(){
+  const el = document.getElementById('ldjson');
+  if(!el) return;
+  try{
+    el.textContent = JSON.stringify({
+      "@context":"https://schema.org",
+      "@type":"EducationalOrganization",
+      "name": info.name,
+      "description": info.tagline,
+      "foundingDate": info.established,
+      "address": { "@type":"PostalAddress", "streetAddress": info.address },
+      "telephone": info.phone,
+      "email": info.email
+    });
+  }catch(e){ /* non-critical */ }
+}
+
+function esc(s){
+  return String(s===undefined||s===null?'':s)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+}
+function initials(name){
+  const parts = String(name||'').replace(/^(Dr\.|Er\.|Mr\.|Mrs\.|Ms\.)\s*/i,'').trim().split(/\s+/);
+  return (parts[0]?.[0]||'').toUpperCase() + (parts[1]?.[0]||'').toUpperCase();
+}
+function colorFromString(str){
+  const palette = ['#16305C','#1F7A4D','#A6432E','#C77F1D','#5B4B8A','#0E1F3D'];
+  let h=0; for(let i=0;i<String(str).length;i++) h = String(str).charCodeAt(i) + ((h<<5)-h);
+  return palette[Math.abs(h)%palette.length];
+}
+function fmtDate(iso){
+  if(!iso) return '';
+  try{
+    const d = new Date(iso+'T00:00:00');
+    return d.toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'});
+  }catch(e){ return iso; }
+}
+function fmtDateTime(iso){
+  if(!iso) return null;
+  try{
+    const d = new Date(iso);
+    return d.toLocaleString('en-IN',{day:'numeric',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'});
+  }catch(e){ return null; }
+}
+const BLANK_PX = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
+function parseStatNumber(str){
+  const m = String(str||'').match(/^([\d,]+)(.*)$/);
+  if(!m) return null;
+  const num = parseInt(m[1].replace(/,/g,''),10);
+  if(isNaN(num)) return null;
+  return { num, suffix: m[2] || '' };
+}
+function pushToast(type, text){
+  flashMsg = { type, text };
+  clearTimeout(window._toastTimer);
+  window._toastTimer = setTimeout(()=>{ flashMsg = null; renderApp(); }, 3800);
+}
+function sealSVG(text){
+  return `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Vidya Education Group seal">
+    <circle cx="50" cy="50" r="47" fill="none" stroke="currentColor" stroke-width="2.5"/>
+    <circle cx="50" cy="50" r="38" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="3 4"/>
+    <text x="50" y="55" text-anchor="middle" font-family="Lora, serif" font-weight="700" font-size="20" fill="currentColor">${esc(text)}</text>
+  </svg>`;
+}
+
+function renderApp(){
+  const app = document.getElementById('app');
+  if(!configOK){
+    document.title = 'Setup Required — Vidya Education Group';
+    app.innerHTML = renderSetupScreen();
+    return;
+  }
+  if(!dataLoaded){
+    app.innerHTML = renderLoading();
+    return;
+  }
+  if(location.hash.startsWith('#admin')){
+    document.title = 'Admin Panel — ' + info.name;
+    app.innerHTML = session.isAdmin ? renderAdminDashboard() : renderAdminLogin();
+  } else {
+    document.title = info.name + ' — Diploma Engineering, Bihar';
+    app.innerHTML = renderPublicSite();
+  }
+  bindGlobalEvents();
+}
+
+function renderLoading(){
+  return `<div class="loading-screen"><div class="loading-seal">${sealSVG('VEG')}</div><div>Loading Vidya Education Group…</div></div>`;
+}
+
+function renderSetupScreen(){
+  return `
+  <div class="login-page">
+    <div class="login-card" style="max-width:600px;text-align:left;">
+      <h3 style="text-align:center;">One-time setup needed</h3>
+      <p style="color:var(--ink-soft);font-size:14px;text-align:center;">This site stores everything in a free Supabase database, and uses Supabase Auth for the staff login. Connect it once:</p>
+      <ol class="setup-steps">
+        <li>Create a free account and project at <b>supabase.com</b>.</li>
+        <li>Open <b>SQL Editor</b> in your project, paste in the <code>supabase-setup.sql</code> file provided alongside this website, and run it.</li>
+        <li>Go to <b>Authentication → Users → Add user</b> and create the email + password your staff will log in with. This is the real account that signs in to the Admin Panel — there is no separate password stored by this page.</li>
+        <li>Go to <b>Project Settings → Data API</b> and copy your <b>Project URL</b> and <b>anon / publishable key</b>.</li>
+        <li>Open this HTML file in a text editor, find the <code>CONFIGURATION</code> section near the top of the <code>&lt;script&gt;</code>, and paste your URL and key in.</li>
+        <li>Save and reload this page.</li>
+      </ol>
+      <p class="hint">If you've done all this and still see this message, check your internet connection — the page needs to reach both Supabase and its CDN library.</p>
+    </div>
+  </div>`;
+}
+
+function renderPublicSite(){
+  return `
+  ${renderTicker()}
+  ${renderHeader()}
+  ${renderTrustStrip()}
+  <main id="main-content">
+    ${renderHero()}
+    ${renderQuickLinks()}
+    ${renderAbout()}
+    ${renderAchievements()}
+    ${renderCourses()}
+    ${renderAdmissions()}
+    ${renderLateralEntry()}
+    ${renderCalendar()}
+    ${renderPlacements()}
+    ${renderTestimonials()}
+    ${renderFaculty()}
+    ${renderNotices()}
+    ${renderResults()}
+    ${renderGallery()}
+    ${renderDownloads()}
+    ${renderCommittees()}
+    ${renderContact()}
+  </main>
+  ${renderFooter()}
+  ${lightboxIndex !== null ? renderLightbox() : ''}
+  ${renderToast()}
+  ${dbErrors.length ? `<div class="toast error" style="top:auto;bottom:20px;max-width:380px;">Could not load: ${esc(dbErrors.join('; '))}. Check Row Level Security and Data API settings for these tables in Supabase.</div>` : ''}
+  `;
+}
+
+function renderTicker(){
+  const important = notices.filter(n=>n.important);
+  if(important.length === 0) return '';
+  const items = important.map(n => `<a href="#notice-${esc(n.id)}" onclick="closeNav()">${esc(n.title)}</a>`).join('');
+  return `
+  <div class="ticker-bar" role="region" aria-label="Important notices">
+    <div class="container">
+      <span class="ticker-tag">Notice</span>
+      <div class="ticker-viewport"><div class="ticker-track">${items}${items}</div></div>
+    </div>
+  </div>`;
+}
+
+function renderHeader(){
+  return `
+  <header class="site-header">
+    <div class="header-row">
+      <a class="brand" href="#home">
+        <div class="seal" style="width:44px;height:44px;color:var(--navy);">${info.logo_url ? `<img src="${info.logo_url}" alt="${esc(info.short_name)} logo" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">` : sealSVG(esc(info.short_name||'VEG'))}</div>
+        <div class="brand-text">
+          <div class="name">${esc(info.name)}</div>
+          <div class="tagline">${esc(info.tagline)}</div>
+        </div>
+      </a>
+      <button id="navToggle" aria-label="Open menu" aria-expanded="${navOpen}" onclick="toggleNav()"><span></span><span></span><span></span></button>
+      <nav class="main-nav ${navOpen?'open':''}" id="mainNav">
+        <button class="nav-close" aria-label="Close menu" onclick="closeNav()">&times;</button>
+        <a href="#about-section" onclick="closeNav()">About</a>
+        <a href="#courses-section" onclick="closeNav()">Courses</a>
+        <a href="#admissions-section" onclick="closeNav()">Admissions</a>
+        <a href="#lateral-entry-section" onclick="closeNav()">Lateral Entry</a>
+        <a href="#placements-section" onclick="closeNav()">Placements</a>
+        <a href="#faculty-section" onclick="closeNav()">Faculty</a>
+        <a href="#notices-section" onclick="closeNav()">Notices</a>
+        <a href="#contact-section" onclick="closeNav()">Contact</a>
+        <a href="#admissions-section" class="nav-cta" onclick="closeNav()">Admissions 2026-27</a>
+      </nav>
+      <div class="nav-backdrop ${navOpen?'open':''}" onclick="closeNav()"></div>
+    </div>
+  </header>`;
+}
+
+function renderTrustStrip(){
+  const badges = [];
+  if(info.affiliation) badges.push(info.affiliation);
+  if(info.approval_id) badges.push(info.approval_id);
+  if(badges.length === 0) return '';
+  return `
+  <div class="trust-strip">
+    <div class="container">
+      ${badges.map(b=>`<span class="trust-badge">${ICONS.check}${esc(b)}</span>`).join('')}
+    </div>
+  </div>`;
+}
+
+function renderHero(){
+  const studentStat = parseStatNumber(info.students);
+  const placementStat = parseStatNumber(info.placement_rate);
+  return `
+  <section class="hero" id="home" style="padding-top:56px;">
+    <div class="container hero-inner">
+      <div class="reveal in-view">
+        <span class="eyebrow" style="color:var(--marigold);">Est. ${esc(info.established)} &middot; AICTE-format Diploma Programmes</span>
+        <h1>${esc(info.name)}</h1>
+        <p class="lede">${esc(info.tagline)}</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#courses-section">View Courses</a>
+          <a class="btn btn-outline" href="#admissions-section">Admissions 2026-27</a>
+        </div>
+      </div>
+      <div class="hero-seal-wrap reveal in-view">
+        <div class="corner-mark tl"></div><div class="corner-mark tr"></div><div class="corner-mark bl"></div><div class="corner-mark br"></div>
+        <div class="seal seal-spin" style="color:var(--marigold);">${sealSVG(esc(info.short_name||'VEG'))}</div>
+      </div>
+    </div>
+    <div class="stat-strip">
+      <div class="container stat-row">
+        <div class="stat"><div class="num" ${studentStat?`data-count="${studentStat.num}" data-suffix="${esc(studentStat.suffix)}"`:''}>${studentStat?studentStat.num:esc(info.students)}${studentStat?studentStat.suffix:''}</div><div class="label">Students</div></div>
+        <div class="stat"><div class="num" data-count="${courses.length}">${courses.length}</div><div class="label">Diploma Branches</div></div>
+        <div class="stat"><div class="num" ${placementStat?`data-count="${placementStat.num}" data-suffix="${esc(placementStat.suffix)}"`:''}>${placementStat?placementStat.num:esc(info.placement_rate)}${placementStat?placementStat.suffix:''}</div><div class="label">Placement Rate</div></div>
+        <div class="stat"><div class="num" data-count="${faculty.length}">${faculty.length}</div><div class="label">Faculty Members</div></div>
+        <div class="stat"><div class="num">${esc(info.established)}</div><div class="label">Established</div></div>
+      </div>
+    </div>
+  </section>`;
+}
+
+function renderQuickLinks(){
+  const links = [
+    {href:'#calendar-section', label:'Academic Calendar', icon:'calendar'},
+    {href:'#results-section', label:'Results', icon:'results'},
+    {href:'#notices-section', label:'Notices', icon:'notices'},
+    {href:'#downloads-section', label:'Downloads', icon:'downloads'},
+    {href:'#gallery-section', label:'Gallery', icon:'gallery'},
+    {href:'#committees-section', label:'Mandatory Disclosure', icon:'committees'}
+  ];
+  return `
+  <section id="quicklinks-section" style="padding:40px 0 8px;">
+    <div class="container">
+      <div class="quicklinks-grid reveal in-view">
+        ${links.map(l=>`<a class="quicklink-card" href="${l.href}">${ICONS[l.icon]}<span>${l.label}</span></a>`).join('')}
+      </div>
+    </div>
+  </section>`;
+}
+
+function renderAbout(){
+  const leaders = tableData.leadership || [];
+  const cards = leaders.map((l,i) => `
+    <div class="leader-card reveal" style="transition-delay:${i*60}ms;">
+      <div class="leader-photo">
+        ${l.photo_url ? `<img src="${l.photo_url}" alt="${esc(l.name)}">` : esc(initials(l.name))}
+      </div>
+      <div class="leader-name">${esc(l.name)}</div>
+      <div class="leader-title">${esc(l.title)}</div>
+      <p class="leader-message">${esc(l.message)}</p>
+    </div>`).join('');
+  return `
+  <section id="about-section">
+    <div class="container">
+      <div class="section-head reveal"><span class="eyebrow">About the Group</span><h2>A message from our leadership</h2></div>
+      ${leaders.length ? `<div class="leader-grid">${cards}</div>` : '<p>Leadership messages will appear here once added from the Admin Panel.</p>'}
+      <div class="vision-mission reveal" style="margin-top:32px;">
+        <div class="vm-card"><h4>Vision</h4><p>${esc(about.vision)}</p></div>
+        <div class="vm-card"><h4>Mission</h4><p>${esc(about.mission)}</p></div>
+      </div>
+    </div>
+  </section>`;
+}
+
+function renderAchievements(){
+  const items = tableData.achievements || [];
+  const cards = items.map((a,i)=>`
+    <div class="achieve-row reveal" style="transition-delay:${i*50}ms;">
+      <div class="achieve-year">${esc(a.year)}</div>
+      <div><div class="achieve-title">${esc(a.title)}</div>${a.description?`<div class="achieve-desc">${esc(a.description)}</div>`:''}</div>
+    </div>`).join('');
+  return `
+  <section id="achievements-section" style="background:var(--paper-dark);">
+    <div class="container">
+      <div class="section-head reveal"><span class="eyebrow">Our Journey</span><h2>Milestones & Achievements</h2></div>
+      ${items.length? `<div class="achieve-list">${cards}</div>` : '<p>Milestones will appear here once added from the Admin Panel.</p>'}
+    </div>
+  </section>`;
+}
+
+function renderCourses(){
+  const cards = courses.map((c,i) => `
+    <div class="course-card reveal" style="transition-delay:${i*70}ms;">
+      <span class="code-mark">${esc(c.code)}</span>
+      <span class="code-tag">${esc(c.code)}</span>
+      <h3>${esc(c.name)}</h3>
+      <div class="meta">${esc(c.duration)} &middot; ${esc(c.seats)} seats</div>
+      <p>${esc(c.description)}</p>
+    </div>`).join('');
+  return `
+  <section id="courses-section">
+    <div class="container">
+      <div class="section-head reveal"><span class="eyebrow">Diploma Programmes</span><h2>Courses on offer</h2><p>Every branch pairs classroom theory with regular workshop and laboratory hours.</p></div>
+      <div class="course-grid">${cards || '<p>Courses will appear here once added from the Admin Panel.</p>'}</div>
+    </div>
+  </section>`;
+}
+
+function renderAdmissions(){
+  return `
+  <section id="admissions-section" style="background:var(--paper-dark);">
+    <div class="container">
+      <div class="admissions reveal">
+        <span class="eyebrow">Admissions 2026-27</span>
+        <h2>How to join us</h2>
+        <p style="color:#D9E1EE;max-width:640px;">Admission to all diploma branches is through the state-level polytechnic entrance examination.</p>
+        <ul class="timeline">
+          <li><div class="t-date">1 May 2026</div><div class="t-label">Applications open</div></li>
+          <li><div class="t-date">15 Jun 2026</div><div class="t-label">Applications close</div></li>
+          <li><div class="t-date">22 Jun 2026</div><div class="t-label">Entrance exam</div></li>
+          <li><div class="t-date">5 Jul 2026</div><div class="t-label">Result declared</div></li>
+          <li><div class="t-date">15-30 Jul 2026</div><div class="t-label">Counselling &amp; seat allotment</div></li>
+        </ul>
+        <p class="admit-eligibility"><strong>Eligibility:</strong> Passed Matriculation (Class 10) with Science and Mathematics from a recognised board.</p>
+        <p class="disclaimer">Dates shown above are illustrative. Update them from the Admin Panel once your official notification is released.</p>
+      </div>
+    </div>
+  </section>`;
+}
+
+function renderLateralEntry(){
+  return `
+  <section id="lateral-entry-section" style="background:var(--paper-dark);">
+    <div class="container">
+      <div class="admissions reveal">
+        <span class="eyebrow" style="color:var(--leaf);">Lateral Entry &middot; Direct to 2nd Year</span>
+        <h2>Already passed 12th or hold a diploma? Skip the 1st year.</h2>
+        <p style="color:#D9E1EE;max-width:640px;">Students who have passed 12th (Science stream with Physics, Chemistry and Mathematics) or hold a diploma/ITI certificate in a relevant trade can join directly into the 2nd year of any branch through Lateral Entry, without repeating the 1st year.</p>
+        <ul class="timeline">
+          <li><div class="t-date">1 Jun 2026</div><div class="t-label">LEET application opens</div></li>
+          <li><div class="t-date">20 Jun 2026</div><div class="t-label">Application closes</div></li>
+          <li><div class="t-date">28 Jun 2026</div><div class="t-label">LEET entrance exam</div></li>
+          <li><div class="t-date">10 Jul 2026</div><div class="t-label">Result declared</div></li>
+          <li><div class="t-date">20-31 Jul 2026</div><div class="t-label">Counselling &amp; seat allotment</div></li>
+        </ul>
+        <p class="admit-eligibility"><strong>Eligibility:</strong> Passed 12th (Science, with Physics, Chemistry and Maths) OR a diploma/ITI certificate in a related trade, from a recognised board or institute. Admission is through LEET (Lateral Entry Entrance Test); a limited number of seats are reserved per branch.</p>
+        <p class="disclaimer">Dates and seat numbers shown above are illustrative. Update them from the Admin Panel once your official notification is released.</p>
+      </div>
+    </div>
+  </section>`;
+}
+
+function renderCalendar(){
+  const events = tableData.calendar_events || [];
+  const catColor = {Exam:'var(--brick)', Holiday:'var(--leaf)', Admission:'var(--marigold-dark)', Event:'var(--navy)', Other:'var(--ink-soft)'};
+  const rows = events.map((e,i)=>`
+    <div class="cal-row reveal" style="transition-delay:${i*40}ms;border-left-color:${catColor[e.category]||'var(--ink-soft)'};">
+      <div class="cal-date">${fmtDate(e.event_date)}${e.end_date?(' &ndash; '+fmtDate(e.end_date)):''}</div>
+      <div class="cal-body"><div class="cal-title">${esc(e.title)}</div>${e.description?`<div class="cal-desc">${esc(e.description)}</div>`:''}${e.pdf_url?`<a class="notice-pdf-link" href="${e.pdf_url}" target="_blank" rel="noopener">View attached PDF</a>`:''}</div>
+      <div class="cal-tag" style="background:${catColor[e.category]||'var(--ink-soft)'};">${esc(e.category||'Event')}</div>
+    </div>`).join('');
+  return `
+  <section id="calendar-section">
+    <div class="container">
+      <div class="section-head reveal"><span class="eyebrow">Plan Ahead</span><h2>Academic Calendar</h2></div>
+      ${events.length? `<div class="cal-list">${rows}</div>` : '<p>No calendar events posted yet.</p>'}
+    </div>
+  </section>`;
+}
+
+function renderPlacements(){
+  const recruiters = tableData.recruiters || [];
+  return `
+  <section id="placements-section" style="background:var(--paper-dark);">
+    <div class="container">
+      <div class="section-head reveal"><span class="eyebrow">Careers</span><h2>Placements</h2><p>Our placement cell works with recruiters across engineering, construction and manufacturing.</p></div>
+      <div class="placement-stat reveal"><div class="num">${esc(info.placement_rate)}</div><div class="label">Average placement rate</div></div>
+      ${recruiters.length? `<div class="recruiter-grid reveal">${recruiters.map(r=>`<div class="recruiter-chip">${r.logo_url?`<img src="${r.logo_url}" alt="${esc(r.company_name)}">`:''}<span>${esc(r.company_name)}</span></div>`).join('')}</div>`
+      : `<div class="gallery-empty reveal">Recruiter names will appear here once added from the Admin Panel.</div>`}
+    </div>
+  </section>`;
+}
+
+function renderTestimonials(){
+  const items = tableData.testimonials || [];
+  const cards = items.map((t,i)=>`
+    <div class="testi-card reveal" style="transition-delay:${i*60}ms;">
+      <div class="testi-quote-mark">&ldquo;</div>
+      <p class="testi-quote">${esc(t.quote)}</p>
+      <div class="testi-person">
+        <div class="testi-avatar" style="background:${t.photo_url?'transparent':colorFromString(t.name)};">${t.photo_url?`<img src="${t.photo_url}" alt="${esc(t.name)}">`:esc(initials(t.name))}</div>
+        <div><div class="testi-name">${esc(t.name)}</div><div class="testi-role">${esc(t.role)}</div></div>
+      </div>
+    </div>`).join('');
+  return `
+  <section id="testimonials-section">
+    <div class="container">
+      <div class="section-head reveal"><span class="eyebrow">Voices</span><h2>What our students say</h2></div>
+      ${items.length? `<div class="testi-grid">${cards}</div>` : '<div class="gallery-empty reveal">Student and alumni testimonials will appear here once added from the Admin Panel.</div>'}
+    </div>
+  </section>`;
+}
+
+function renderFaculty(){
+  const cards = faculty.map((f,i) => `
+    <div class="faculty-card reveal" style="transition-delay:${i*60}ms;">
+      <div class="faculty-avatar" style="background:${f.photo_url?'transparent':colorFromString(f.name)};">
+        ${f.photo_url ? `<img src="${f.photo_url}" alt="${esc(f.name)}">` : esc(initials(f.name))}
+      </div>
+      <h4>${esc(f.name)}</h4>
+      <div class="desig">${esc(f.designation)}</div>
+      <div class="qual">${esc(f.qualification)}</div>
+    </div>`).join('');
+  return `
+  <section id="faculty-section" style="background:var(--paper-dark);">
+    <div class="container">
+      <div class="section-head reveal"><span class="eyebrow">Our People</span><h2>Faculty</h2><p>Every department is led by an experienced engineer-teacher.</p></div>
+      <div class="faculty-grid">${cards || '<p>Faculty profiles will appear here once added from the Admin Panel.</p>'}</div>
+    </div>
+  </section>`;
+}
+
+function renderNotices(){
+  const sorted = [...notices].sort((a,b)=> String(b.notice_date||'').localeCompare(String(a.notice_date||'')));
+  const cards = sorted.map((n,i) => `
+    <div class="notice-card reveal" id="notice-${esc(n.id)}" style="transition-delay:${i*60}ms;">
+      ${n.important ? '<span class="notice-important">Important</span><br>' : ''}
+      <div class="notice-date">${fmtDate(n.notice_date)}</div>
+      <h4>${esc(n.title)}</h4>
+      <p>${esc(n.content)}</p>
+      ${n.pdf_url ? `<a class="notice-pdf-link" href="${n.pdf_url}" target="_blank" rel="noopener">View attached PDF</a>` : ''}
+    </div>`).join('');
+  return `
+  <section id="notices-section">
+    <div class="container">
+      <div class="section-head reveal"><span class="eyebrow">Notice Board</span><h2>Latest announcements</h2></div>
+      <div class="noticeboard"><div class="notice-grid">${cards || '<p>No notices posted yet.</p>'}</div></div>
+    </div>
+  </section>`;
+}
+
+function renderResults(){
+  const results = tableData.results || [];
+  const rows = results.map((r,i)=>`
+    <div class="result-row reveal" style="transition-delay:${i*40}ms;">
+      <span class="pdf-badge">PDF</span>
+      <div class="info" style="flex:1;"><div class="rtitle">${esc(r.title)}</div><div class="rmeta">${[r.branch,r.semester?('Semester '+r.semester):null,r.published_date?fmtDate(r.published_date):null].filter(Boolean).map(x=>esc(x)).join(' &middot; ')}</div></div>
+      ${r.pdf_url? `<a class="btn btn-primary" href="${r.pdf_url}" target="_blank" rel="noopener">View PDF</a>` : ''}
+    </div>`).join('');
+  return `
+  <section id="results-section" style="background:var(--paper-dark);">
+    <div class="container">
+      <div class="section-head reveal"><span class="eyebrow">Academics</span><h2>Results</h2></div>
+      ${results.length? `<div class="result-list">${rows}</div>` : '<p>No results published yet.</p>'}
+    </div>
+  </section>`;
+}
+
+function renderGallery(){
+  let body;
+  if(gallery.length === 0){
+    body = `<div class="gallery-empty reveal">This gallery is empty right now.<br>Staff can <a href="#admin">log in to the Admin Panel</a> to add campus photos.</div>`;
+  } else {
+    body = `<div class="gallery-grid">${gallery.map((g,i)=>`
+      <div class="reveal" style="transition-delay:${i*50}ms;">
+        <div class="gallery-item" onclick="openLightbox(${i})"><img src="${g.photo_url}" alt="${esc(g.caption||'Campus photo')}"></div>
+        ${g.caption ? `<div class="gallery-caption">${esc(g.caption)}</div>` : ''}
+      </div>`).join('')}</div>`;
+  }
+  return `
+  <section id="gallery-section">
+    <div class="container">
+      <div class="section-head reveal"><span class="eyebrow">Campus Life</span><h2>Gallery</h2></div>
+      ${body}
+    </div>
+  </section>`;
+}
+
+function renderLightbox(){
+  const item = gallery[lightboxIndex];
+  if(!item) return '';
+  return `
+  <div class="lightbox-overlay" onclick="if(event.target===this) closeLightbox()">
+    <button class="lightbox-close" aria-label="Close" onclick="closeLightbox()">&times;</button>
+    ${gallery.length>1 ? `<button class="lightbox-nav prev" aria-label="Previous photo" onclick="navigateLightbox(-1)">&#8249;</button>` : ''}
+    <div><img src="${item.photo_url}" alt="${esc(item.caption||'Campus photo')}">${item.caption ? `<div class="lightbox-caption">${esc(item.caption)}</div>` : ''}</div>
+    ${gallery.length>1 ? `<button class="lightbox-nav next" aria-label="Next photo" onclick="navigateLightbox(1)">&#8250;</button>` : ''}
+  </div>`;
+}
+
+function renderDownloads(){
+  const items = tableData.downloads || [];
+  const rows = items.map((d,i)=>`
+    <div class="download-row reveal" style="transition-delay:${i*40}ms;">
+      <span class="pdf-badge">PDF</span>
+      <div class="info" style="flex:1;"><div class="dtitle">${esc(d.title)}</div>${d.category?`<div class="dcat">${esc(d.category)}</div>`:''}</div>
+      ${d.pdf_url? `<a class="btn-ghost" href="${d.pdf_url}" target="_blank" rel="noopener">Download</a>`:''}
+    </div>`).join('');
+  return `
+  <section id="downloads-section" style="background:var(--paper-dark);">
+    <div class="container">
+      <div class="section-head reveal"><span class="eyebrow">Resources</span><h2>Downloads</h2></div>
+      ${items.length? `<div class="download-list">${rows}</div>` : '<p>No documents uploaded yet.</p>'}
+    </div>
+  </section>`;
+}
+
+function renderCommittees(){
+  const items = tableData.committees || [];
+  const cards = items.map((c,i)=>`
+    <div class="committee-card reveal" style="transition-delay:${i*60}ms;">
+      <h4>${esc(c.name)}</h4>
+      <p>${esc(c.description)}</p>
+      ${c.members ? `<div class="committee-members">${String(c.members).split('\n').map(m=>`<div>${esc(m)}</div>`).join('')}</div>` : ''}
+    </div>`).join('');
+  return `
+  <section id="committees-section">
+    <div class="container">
+      <div class="section-head reveal"><span class="eyebrow">Mandatory Disclosure</span><h2>Committees</h2></div>
+      <div class="committee-grid">${cards || '<p>Committee information will appear here.</p>'}</div>
+    </div>
+  </section>`;
+}
+
+function renderContact(){
+  const hasMap = info.map_url && info.map_url.trim();
+  return `
+  <section id="contact-section" style="background:var(--paper-dark);">
+    <div class="container">
+      <div class="section-head reveal"><span class="eyebrow">Get in Touch</span><h2>Contact us</h2></div>
+      <div class="contact-grid reveal">
+        <div class="contact-card">
+          <div class="row"><div class="k">Address</div><div>${esc(info.address)}</div></div>
+          <div class="row"><div class="k">Phone</div><div>${esc(info.phone)}</div></div>
+          <div class="row"><div class="k">Email</div><div>${esc(info.email)}</div></div>
+        </div>
+        ${hasMap
+          ? `<div class="map-embed"><iframe src="${esc(info.map_url.trim())}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Campus location map"></iframe></div>`
+          : `<div class="map-box">Map placeholder — add a Google Maps embed URL from the Admin Panel to show your campus location here.</div>`}
+      </div>
+      <div class="enquiry-card reveal">
+        <h3 style="font-size:18px;margin-bottom:4px;">Have a question? Send us an enquiry</h3>
+        <p style="color:var(--ink-soft);font-size:13.5px;margin-bottom:18px;">Fill this in and our admissions team will get back to you.</p>
+        <form onsubmit="return handleSubmitEnquiry(event)">
+          <div class="form-grid">
+            <div class="field"><label>Name</label><input name="name" required></div>
+            <div class="field"><label>Phone</label><input name="phone" required></div>
+            <div class="field"><label>Email (optional)</label><input type="email" name="email"></div>
+            <div class="field"><label>Course you're interested in</label>
+              <select name="course_interested">
+                <option value="">General enquiry</option>
+                ${courses.map(c=>`<option value="${esc(c.name)}">${esc(c.name)}</option>`).join('')}
+              </select>
+            </div>
+            <div class="field full"><label>Message (optional)</label><textarea name="message"></textarea></div>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Enquiry</button>
+        </form>
+      </div>
+    </div>
+  </section>`;
+}
+
+function renderFooter(){
+  const updated = fmtDateTime(siteMeta.lastUpdated);
+  const socials = [
+    info.facebook_url ? {url:info.facebook_url, icon:'facebook', label:'Facebook'} : null,
+    info.instagram_url ? {url:info.instagram_url, icon:'instagram', label:'Instagram'} : null,
+    info.youtube_url ? {url:info.youtube_url, icon:'youtube', label:'YouTube'} : null
+  ].filter(Boolean);
+  return `
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <div class="footer-col" style="max-width:280px;">
+        <h5>${esc(info.name)}</h5>
+        <p style="color:#8FA0BC;">${esc(info.tagline)}</p>
+        ${socials.length ? `<div class="footer-social">${socials.map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener" aria-label="${s.label}">${ICONS[s.icon]}</a>`).join('')}</div>` : ''}
+      </div>
+      <div class="footer-col">
+        <h5>Explore</h5>
+        <a href="#courses-section">Courses</a>
+        <a href="#calendar-section">Academic Calendar</a>
+        <a href="#results-section">Results</a>
+        <a href="#downloads-section">Downloads</a>
+      </div>
+      <div class="footer-col">
+        <h5>More</h5>
+        <a href="#gallery-section">Gallery</a>
+        <a href="#committees-section">Mandatory Disclosure</a>
+        <a href="mailto:${esc(info.email)}">${esc(info.email)}</a>
+        <a href="tel:${esc(info.phone)}">${esc(info.phone)}</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <div>&copy; ${new Date().getFullYear()} ${esc(info.name)}${updated ? ` &middot; Content last updated ${esc(updated)}` : ''}</div>
+      <a href="#admin">Staff Login</a>
+    </div>
+  </footer>`;
+}
+
+function renderToast(){
+  if(!flashMsg) return '';
+  return `<div class="toast ${flashMsg.type}" role="status">${esc(flashMsg.text)}</div>`;
+}
+
+function renderAdminLogin(){
+  return `
+  <div class="login-page">
+    <div class="login-card">
+      <div class="seal" style="color:var(--brick);">${sealSVG(esc(info.short_name||'VEG'))}</div>
+      <h3>Staff Login</h3>
+      <p class="sub" style="color:var(--ink-soft);font-size:13.5px;margin-bottom:20px;">Sign in to edit the college website.</p>
+      <form onsubmit="return handleLogin(event)">
+        <div class="field"><label for="email">Email</label><input type="email" id="email" name="email" autocomplete="username" required></div>
+        <div class="field"><label for="pw">Password</label><input type="password" id="pw" name="pw" autocomplete="current-password" required></div>
+        <button type="submit" class="btn-admin" style="width:100%;">Log in</button>
+      </form>
+      <p class="hint">Use the email and password created for your staff account in Supabase (Authentication → Users).</p>
+      <p class="hint"><a href="#home">&larr; Back to the website</a></p>
+    </div>
+  </div>
+  ${renderToast()}`;
+}
+
+function renderAdminDashboard(){
+  const tabs = [
+    ['info','Institution Details','info'],
+    ['about','Vision & Mission','about'],
+    ['leadership','Leadership','about'],
+    ['achievements','Milestones & Achievements','achievements'],
+    ['courses','Courses','courses'],
+    ['faculty','Faculty','faculty'],
+    ['notices','Notices','notices'],
+    ['results','Results','results'],
+    ['calendar_events','Academic Calendar','calendar'],
+    ['gallery','Gallery','gallery'],
+    ['recruiters','Placements & Recruiters','placements'],
+    ['testimonials','Testimonials','testimonials'],
+    ['downloads','Downloads','downloads'],
+    ['committees','Committees & Disclosure','committees'],
+    ['enquiries','Enquiries','enquiries'],
+    ['account','Account & Security','account']
+  ];
+  const tabBtns = tabs.map(([key,label,icon]) => `<button class="${adminTab===key?'active':''}" onclick="setAdminTab('${key}')">${ICONS[icon]}<span>${label}</span></button>`).join('');
+
+  let panel;
+  if(adminTab==='info') panel = renderAdminInfo();
+  else if(adminTab==='about') panel = renderAdminAbout();
+  else if(adminTab==='courses') panel = renderAdminCourses();
+  else if(adminTab==='faculty') panel = renderAdminFaculty();
+  else if(adminTab==='notices') panel = renderAdminNotices();
+  else if(adminTab==='gallery') panel = renderAdminGallery();
+  else if(adminTab==='enquiries') panel = renderAdminEnquiries();
+  else if(adminTab==='account') panel = renderAdminAccount();
+  else if(SIMPLE_SECTIONS[adminTab]) panel = renderGenericAdmin(adminTab);
+  else panel = '';
+
+  return `
+  <div class="admin-topbar">
+    <div class="container">
+      <span class="lbl">${ICONS.account}ADMIN MODE — editing ${esc(info.name)}</span>
+      <span class="actions"><a href="#home">View site</a><button onclick="handleLogout()">Log out</button></span>
+    </div>
+  </div>
+  <div class="admin-wrap">
+    ${dbErrors.length ? `<div class="toast error" style="position:static;display:block;margin-bottom:16px;"><b>Could not load from these tables:</b> ${esc(dbErrors.join('; '))}.<br>Check that the SQL setup script ran fully, that Row Level Security policies exist for these tables, and that they are exposed under Project Settings → Data API.</div>` : ''}
+    <div class="admin-shell">
+      <div class="admin-sidebar"><div class="admin-tabs">${tabBtns}</div></div>
+      <div class="admin-panel">${panel}</div>
+    </div>
+  </div>
+  ${renderToast()}`;
+}
+
+function lastTouchedLine(){
+  const updated = fmtDateTime(siteMeta.lastUpdated);
+  return updated ? `<div class="last-touched">Saved this session: ${esc(updated)}</div>` : '';
+}
+
+function renderAdminInfo(){
+  return `
+  <h3>${ICONS.info}Institution Details</h3>
+  <p class="sub">This information appears in the header, hero banner, footer and contact section.</p>
+  ${lastTouchedLine()}
+  <form onsubmit="return handleSaveInfo(event)">
+    <div class="form-grid">
+      <div class="field"><label>Group name</label><input name="name" value="${esc(info.name)}" required></div>
+      <div class="field"><label>Short name / initials (for the seal)</label><input name="short_name" maxlength="4" value="${esc(info.short_name)}" required></div>
+      <div class="field full"><label>Tagline</label><input name="tagline" value="${esc(info.tagline)}"></div>
+      <div class="field"><label>Established (year)</label><input name="established" value="${esc(info.established)}"></div>
+      <div class="field"><label>Placement rate (shown as text, e.g. 82%)</label><input name="placement_rate" value="${esc(info.placement_rate)}"></div>
+      <div class="field"><label>Student count (shown as text, e.g. 1,200+)</label><input name="students" value="${esc(info.students)}"></div>
+      <div class="field"><label>Phone</label><input name="phone" value="${esc(info.phone)}"></div>
+      <div class="field full"><label>Email</label><input type="email" name="email" value="${esc(info.email)}"></div>
+      <div class="field full"><label>Address</label><textarea name="address">${esc(info.address)}</textarea></div>
+      <div class="field full">
+        <label>Map embed URL (optional)</label>
+        <input name="map_url" value="${esc(info.map_url||'')}" placeholder="https://www.google.com/maps/embed?pb=...">
+        <div class="hint">In Google Maps: search your location → Share → Embed a map → copy just the URL inside <code>src="..."</code> and paste it here.</div>
+      </div>
+      <div class="field full"><label>Affiliation (shown as a trust badge near the top of the site)</label><input name="affiliation" value="${esc(info.affiliation||'')}" placeholder="e.g. Affiliated to Bihar State Council of Technical Education"></div>
+      <div class="field full">
+        <label>Approval / accreditation number (optional second badge)</label>
+        <input name="approval_id" value="${esc(info.approval_id||'')}" placeholder="e.g. AICTE Approval No. 1-XXXXXXXXX">
+        <div class="hint">Leave both of these blank to hide the badge strip entirely. Use your real, current approval details — this is a trust signal for parents and students, so accuracy matters.</div>
+      </div>
+      <div class="field"><label>Facebook URL (optional)</label><input name="facebook_url" value="${esc(info.facebook_url||'')}" placeholder="https://facebook.com/..."></div>
+      <div class="field"><label>Instagram URL (optional)</label><input name="instagram_url" value="${esc(info.instagram_url||'')}" placeholder="https://instagram.com/..."></div>
+      <div class="field"><label>YouTube URL (optional)</label><input name="youtube_url" value="${esc(info.youtube_url||'')}" placeholder="https://youtube.com/..."></div>
+    </div>
+    <div class="field">
+      <label>Logo (replaces the initials seal)</label>
+      <div class="file-row">
+        <img class="file-preview" id="logoPreview" src="${info.logo_url || BLANK_PX}" style="${info.logo_url?'':'display:none;'}">
+        <input type="file" accept="image/*" onchange="handleLogoPick(event)">
+      </div>
+      <div class="hint" id="logoStatus"></div>
+    </div>
+    <button type="submit" class="btn-admin">Save changes</button>
+  </form>`;
+}
+
+function renderAdminAbout(){
+  return `
+  <h3>${ICONS.about}Vision & Mission</h3>
+  <p class="sub">The group's overall vision and mission statement. Leadership photos and messages (Principal, Director, Secretary, etc.) are managed in the Leadership tab.</p>
+  ${lastTouchedLine()}
+  <form onsubmit="return handleSaveAbout(event)">
+    <div class="field full"><label>Vision</label><textarea name="vision">${esc(about.vision)}</textarea></div>
+    <div class="field full"><label>Mission</label><textarea name="mission">${esc(about.mission)}</textarea></div>
+    <button type="submit" class="btn-admin">Save changes</button>
+  </form>`;
+}
+
+function renderAdminCourses(){
+  const rows = courses.map(c => `
+    <div class="item-row">
+      <div class="info"><b>${esc(c.code)} — ${esc(c.name)}</b><br>${esc(c.duration)} &middot; ${esc(c.seats)} seats</div>
+      <div class="btns"><button class="btn-ghost" onclick='openEditCourse("${c.id}")'>Edit</button><button class="btn-danger" onclick="deleteCourse('${c.id}')">Delete</button></div>
+    </div>`).join('');
+  const ed = window._editingCourseData;
+  return `
+  <h3>${ICONS.courses}Courses</h3>
+  <p class="sub">Add, edit or remove diploma branches shown on the website.</p>
+  ${lastTouchedLine()}
+  ${rows || '<p class="hint">No courses yet — add the first one below.</p>'}
+  <div class="add-form">
+    <h4 style="font-size:15px;">${window._editingCourse ? 'Edit course' : 'Add a new course'}</h4>
+    <form onsubmit="return handleSaveCourse(event)">
+      <div class="form-grid">
+        <div class="field"><label>Branch code (e.g. CE, ME, CSE)</label><input name="code" maxlength="6" value="${esc(ed?.code||'')}" required></div>
+        <div class="field"><label>Branch name</label><input name="name" value="${esc(ed?.name||'')}" required></div>
+        <div class="field"><label>Duration</label><input name="duration" value="${esc(ed?.duration||'3 Years')}"></div>
+        <div class="field"><label>Seats</label><input type="number" name="seats" value="${esc(ed?.seats||60)}"></div>
+        <div class="field full"><label>Description</label><textarea name="description">${esc(ed?.description||'')}</textarea></div>
+      </div>
+      <button type="submit" class="btn-admin">${window._editingCourse ? 'Save course' : 'Add course'}</button>
+      ${window._editingCourse ? `<button type="button" class="btn-ghost" onclick="cancelEditCourse()">Cancel</button>` : ''}
+    </form>
+  </div>`;
+}
+
+function renderAdminFaculty(){
+  const rows = faculty.map(f => `
+    <div class="item-row">
+      ${f.photo_url ? `<img class="thumb" src="${f.photo_url}">` : `<div class="thumb" style="background:${colorFromString(f.name)};display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Lora',serif;font-weight:700;font-size:14px;">${esc(initials(f.name))}</div>`}
+      <div class="info" style="flex:1;"><b>${esc(f.name)}</b><br>${esc(f.designation)} &middot; ${esc(f.department)}</div>
+      <div class="btns"><button class="btn-ghost" onclick='openEditFaculty("${f.id}")'>Edit</button><button class="btn-danger" onclick="deleteFaculty('${f.id}')">Delete</button></div>
+    </div>`).join('');
+  const ed = window._editingFacultyData;
+  return `
+  <h3>${ICONS.faculty}Faculty</h3>
+  <p class="sub">Add faculty members, upload their photo, and set their designation.</p>
+  ${lastTouchedLine()}
+  ${rows || '<p class="hint">No faculty profiles yet — add the first one below.</p>'}
+  <div class="add-form">
+    <h4 style="font-size:15px;">${window._editingFaculty ? 'Edit faculty member' : 'Add a faculty member'}</h4>
+    <form onsubmit="return handleSaveFaculty(event)">
+      <div class="field">
+        <label>Photo (optional — initials are used if none)</label>
+        <div class="file-row">
+          <img class="file-preview" id="facultyPhotoPreview" src="${ed?.photo_url||BLANK_PX}" style="${ed?.photo_url?'':'display:none;'}">
+          <input type="file" accept="image/*" onchange="handleFacultyPhotoPick(event)">
+        </div>
+        <div class="hint" id="facultyPhotoStatus"></div>
+      </div>
+      <div class="form-grid">
+        <div class="field"><label>Full name</label><input name="name" value="${esc(ed?.name||'')}" required></div>
+        <div class="field"><label>Designation</label><input name="designation" value="${esc(ed?.designation||'')}" placeholder="e.g. HOD, Civil Engineering"></div>
+        <div class="field"><label>Department code</label><input name="department" value="${esc(ed?.department||'')}" placeholder="e.g. CE"></div>
+        <div class="field"><label>Qualification</label><input name="qualification" value="${esc(ed?.qualification||'')}" placeholder="e.g. M.Tech, Structural Engineering"></div>
+      </div>
+      <button type="submit" class="btn-admin">${window._editingFaculty ? 'Save' : 'Add faculty member'}</button>
+      ${window._editingFaculty ? `<button type="button" class="btn-ghost" onclick="cancelEditFaculty()">Cancel</button>` : ''}
+    </form>
+  </div>`;
+}
+
+function renderAdminNotices(){
+  const sorted = [...notices].sort((a,b)=> String(b.notice_date||'').localeCompare(String(a.notice_date||'')));
+  const rows = sorted.map(n => `
+    <div class="item-row">
+      <div class="info"><b>${esc(n.title)}</b>${n.important?' <span class="notice-important">Important</span>':''}${n.pdf_url?' <span class="pdf-badge">PDF</span>':''}<br>${fmtDate(n.notice_date)}</div>
+      <div class="btns"><button class="btn-ghost" onclick='openEditNotice("${n.id}")'>Edit</button><button class="btn-danger" onclick="deleteNotice('${n.id}')">Delete</button></div>
+    </div>`).join('');
+  const ed = window._editingNoticeData;
+  return `
+  <h3>${ICONS.notices}Notices</h3>
+  <p class="sub">Post announcements to the notice board and scrolling ticker. You can optionally attach a PDF.</p>
+  ${lastTouchedLine()}
+  ${rows || '<p class="hint">No notices yet — post the first one below.</p>'}
+  <div class="add-form">
+    <h4 style="font-size:15px;">${window._editingNotice ? 'Edit notice' : 'Post a new notice'}</h4>
+    <form onsubmit="return handleSaveNotice(event)">
+      <div class="form-grid">
+        <div class="field full"><label>Title</label><input name="title" value="${esc(ed?.title||'')}" required></div>
+        <div class="field"><label>Date</label><input type="date" name="notice_date" value="${esc(ed?.notice_date||new Date().toISOString().slice(0,10))}"></div>
+        <div class="field" style="display:flex;align-items:flex-end;">
+          <label style="display:flex;align-items:center;gap:8px;font-weight:600;color:var(--ink);">
+            <input type="checkbox" name="important" style="width:auto;" ${ed?.important?'checked':''}> Mark as important (shows in the ticker)
+          </label>
+        </div>
+        <div class="field full"><label>Details</label><textarea name="content">${esc(ed?.content||'')}</textarea></div>
+      </div>
+      <div class="field">
+        <label>Attach a PDF (optional — e.g. a detailed circular)</label>
+        <input type="file" accept="application/pdf" onchange="handleNoticePdfPick(event)">
+        <div class="hint" id="noticePdfStatus">${ed?.pdf_url ? 'A PDF is already attached. Choosing a new one will replace it.' : ''}</div>
+      </div>
+      <button type="submit" class="btn-admin">${window._editingNotice ? 'Save notice' : 'Post notice'}</button>
+      ${window._editingNotice ? `<button type="button" class="btn-ghost" onclick="cancelEditNotice()">Cancel</button>` : ''}
+    </form>
+  </div>`;
+}
+
+function renderAdminGallery(){
+  const rows = gallery.map(g => `
+    <div class="item-row">
+      <img class="thumb" src="${g.photo_url}" style="border-radius:6px;">
+      <div class="info" style="flex:1;">${esc(g.caption||'(no caption)')}</div>
+      <div class="btns"><button class="btn-danger" onclick="deleteGalleryItem('${g.id}')">Delete</button></div>
+    </div>`).join('');
+  return `
+  <h3>${ICONS.gallery}Gallery</h3>
+  <p class="sub">Add campus photos for visitors to see. Click any photo on the public site to view it full-size.</p>
+  ${lastTouchedLine()}
+  ${rows || '<p class="hint">No photos yet — add the first one below.</p>'}
+  <div class="add-form">
+    <h4 style="font-size:15px;">Add a photo</h4>
+    <form onsubmit="return handleAddGalleryPhoto(event)">
+      <div class="file-row">
+        <img class="file-preview" id="galleryPhotoPreview" style="display:none;">
+        <input type="file" accept="image/*" id="galleryPhotoInput" onchange="handleGalleryPhotoPick(event)" required>
+      </div>
+      <div class="hint" id="galleryPhotoStatus"></div>
+      <div class="field"><label>Caption (optional)</label><input name="caption" placeholder="e.g. Mechanical workshop"></div>
+      <button type="submit" class="btn-admin">Add photo</button>
+    </form>
+  </div>`;
+}
+
+function renderAdminEnquiries(){
+  const items = tableData.enquiries || [];
+  const rows = items.map(en => `
+    <div class="item-row" style="align-items:flex-start;">
+      <div class="info" style="flex:1;">
+        <b>${esc(en.name)}</b>${en.status!=='contacted' ? ' <span class="notice-important" style="background:var(--leaf);">New</span>' : ''}<br>
+        ${esc(en.phone)}${en.email?' &middot; '+esc(en.email):''}<br>
+        ${en.course_interested ? `<span style="color:var(--marigold-dark);font-weight:700;">${esc(en.course_interested)}</span><br>` : ''}
+        ${en.message ? `<span style="color:var(--ink-soft);">${esc(en.message)}</span><br>` : ''}
+        <span style="font-size:11.5px;color:var(--ink-soft);">${esc(fmtDateTime(en.created_at)||'')}</span>
+      </div>
+      <div class="btns">
+        ${en.status!=='contacted' ? `<button class="btn-ghost" onclick="markEnquiryContacted('${en.id}')">Mark contacted</button>` : ''}
+        <button class="btn-danger" onclick="deleteEnquiry('${en.id}')">Delete</button>
+      </div>
+    </div>`).join('');
+  return `
+  <h3>${ICONS.enquiries}Enquiries</h3>
+  <p class="sub">Messages submitted through the contact form on the public site.</p>
+  ${items.length ? rows : '<p class="hint">No enquiries yet. They will show up here as soon as someone submits the contact form.</p>'}
+  `;
+}
+
+function renderAdminAccount(){
+  return `
+  <h3>${ICONS.account}Account & Security</h3>
+  <p class="sub">Change the password used to sign in to this Admin Panel.</p>
+  <form onsubmit="return handleChangePassword(event)">
+    <div class="field"><label>New password (at least 8 characters)</label><input type="password" name="next" required minlength="8"></div>
+    <div class="field"><label>Confirm new password</label><input type="password" name="confirm" required minlength="8"></div>
+    <button type="submit" class="btn-admin">Update password</button>
+  </form>
+  <div class="security-note">
+    <h4>How this login is protected</h4>
+    <p style="margin-bottom:6px;">• Sign-in is handled by Supabase Auth, a real server-side authentication service — passwords are never visible to or stored by this webpage.</p>
+    <p style="margin-bottom:6px;">• Only signed-in staff can add, edit or delete content; Row Level Security policies enforce this in the database itself, not just in this page's code.</p>
+    <p style="margin-bottom:0;">• Forgot the password? Reset it from your Supabase Dashboard under Authentication → Users.</p>
+  </div>`;
+}
+
+function genericTitle(key, r){
+  if(key==='recruiters') return r.company_name;
+  if(key==='committees') return r.name;
+  if(key==='testimonials') return r.name;
+  if(key==='achievements') return r.title;
+  if(key==='leadership') return r.name;
+  return r.title;
+}
+function genericSubtitle(key, r){
+  if(key==='results') return [r.branch, r.semester?`Sem ${r.semester}`:null, r.published_date?fmtDate(r.published_date):null].filter(Boolean).join(' · ');
+  if(key==='calendar_events') return [fmtDate(r.event_date), r.end_date?('to '+fmtDate(r.end_date)):null, r.category].filter(Boolean).join(' · ');
+  if(key==='recruiters') return 'Display order ' + (r.sort_order||0);
+  if(key==='downloads') return r.category || '';
+  if(key==='committees') return r.members ? String(r.members).split('\n').filter(Boolean).length + ' member(s) listed' : 'No members listed yet';
+  if(key==='testimonials') return r.role || '';
+  if(key==='achievements') return r.year || '';
+  if(key==='leadership') return r.title || '';
+  return '';
+}
+
+function renderGenericAdmin(key){
+  const cfg = SIMPLE_SECTIONS[key];
+  const rows = tableData[key] || [];
+  const editingId = window['_editing_'+key] || null;
+  const editingData = window['_editingData_'+key] || null;
+
+  const rowsHtml = rows.map(r => `
+    <div class="item-row">
+      <div class="info" style="flex:1;"><b>${esc(genericTitle(key,r))}</b><br>${esc(genericSubtitle(key,r))}</div>
+      <div class="btns"><button class="btn-ghost" onclick='openEditGeneric("${key}","${r.id}")'>Edit</button><button class="btn-danger" onclick="deleteGeneric('${key}','${r.id}')">Delete</button></div>
+    </div>`).join('');
+
+  const fieldsHtml = cfg.fields.map(f=>{
+    const val = editingData ? (editingData[f.name] ?? '') : '';
+    if(f.type==='textarea') return `<div class="field full"><label>${f.label}</label><textarea name="${f.name}" ${f.required?'required':''}>${esc(val)}</textarea></div>`;
+    if(f.type==='select'){
+      const opts = f.options.map(o=>`<option value="${esc(o)}" ${val===o?'selected':''}>${esc(o)}</option>`).join('');
+      return `<div class="field"><label>${f.label}</label><select name="${f.name}">${opts}</select></div>`;
+    }
+    return `<div class="field"><label>${f.label}</label><input type="${f.type}" name="${f.name}" value="${esc(val)}" placeholder="${esc(f.placeholder||'')}" ${f.required?'required':''}></div>`;
+  }).join('');
+
+  let fileHtml = '';
+  if(cfg.file){
+    const hasFile = editingData && editingData[cfg.file.name];
+    if(cfg.file.kind === 'pdf'){
+      fileHtml = `<div class="field"><label>${cfg.file.label}</label>
+        <input type="file" accept="application/pdf" onchange="handleGenericFilePick('${key}', event)">
+        <div class="hint" id="genericFileStatus_${key}">${hasFile ? 'A PDF is already attached. Choosing a new file will replace it.' : ''}</div></div>`;
+    } else {
+      fileHtml = `<div class="field"><label>${cfg.file.label}</label>
+        <div class="file-row">
+          <img class="file-preview" id="genericFilePreview_${key}" src="${hasFile || BLANK_PX}" style="${hasFile?'':'display:none;'}">
+          <input type="file" accept="image/*" onchange="handleGenericFilePick('${key}', event)">
+        </div>
+        <div class="hint" id="genericFileStatus_${key}"></div></div>`;
+    }
+  }
+
+  return `
+  <h3>${ICONS[cfg.icon]}${cfg.label}</h3>
+  <p class="sub">Add, edit or remove entries shown on the public site.</p>
+  ${lastTouchedLine()}
+  ${rows.length ? rowsHtml : '<p class="hint">Nothing here yet — add the first entry below.</p>'}
+  <div class="add-form">
+    <h4 style="font-size:15px;">${editingId ? 'Edit entry' : 'Add a new entry'}</h4>
+    <form onsubmit="return handleGenericSave('${key}', event)">
+      <div class="form-grid">${fieldsHtml}</div>
+      ${fileHtml}
+      <button type="submit" class="btn-admin">${editingId ? 'Save' : 'Add'}</button>
+      ${editingId ? `<button type="button" class="btn-ghost" onclick="cancelEditGeneric('${key}')">Cancel</button>` : ''}
+    </form>
+  </div>`;
+}
+
+function openEditGeneric(key, id){
+  const row = (tableData[key]||[]).find(r=>String(r.id)===String(id));
+  if(!row) return;
+  window['_editing_'+key] = id;
+  window['_editingData_'+key] = {...row};
+  renderApp();
+}
+function cancelEditGeneric(key){
+  window['_editing_'+key] = null;
+  window['_editingData_'+key] = null;
+  renderApp();
+}
+async function handleGenericFilePick(key, e){
+  const cfg = SIMPLE_SECTIONS[key];
+  const file = e.target.files[0];
+  if(!file) return;
+  const statusEl = document.getElementById('genericFileStatus_'+key);
+  if(statusEl) statusEl.textContent = 'Uploading...';
+  try{
+    const url = await uploadToStorage(file, key, { isPdf: cfg.file.kind==='pdf', maxDim:700, quality:0.8 });
+    window['_editingData_'+key] = {...(window['_editingData_'+key]||{}), [cfg.file.name]: url};
+    if(cfg.file.kind !== 'pdf'){
+      const img = document.getElementById('genericFilePreview_'+key);
+      if(img){ img.src = url; img.style.display = 'block'; }
+    }
+    if(statusEl) statusEl.textContent = 'Uploaded.';
+  }catch(err){
+    if(statusEl) statusEl.textContent = err.message || 'Upload failed.';
+  }
+}
+async function handleGenericSave(key, e){
+  e.preventDefault();
+  const cfg = SIMPLE_SECTIONS[key];
+  const f = e.target;
+  const editingId = window['_editing_'+key];
+  const editingData = window['_editingData_'+key];
+  if(cfg.file && cfg.file.required && !editingId && !(editingData && editingData[cfg.file.name])){
+    pushToast('error','Please choose a file first.');
+    renderApp();
+    return false;
+  }
+  const payload = {};
+  cfg.fields.forEach(field=>{
+    if(field.type==='number') payload[field.name] = parseInt(f[field.name].value,10) || 0;
+    else payload[field.name] = f[field.name].value.trim();
+  });
+  if(cfg.file && editingData && editingData[cfg.file.name]) payload[cfg.file.name] = editingData[cfg.file.name];
+
+  let ok;
+  if(editingId){
+    ok = await dbUpdate(cfg.table, editingId, payload);
+  } else {
+    ok = !!(await dbInsert(cfg.table, payload));
+  }
+  if(ok){
+    tableData[key] = await dbSelectList(cfg.table, cfg.orderCol, cfg.ascending);
+    await touchLastUpdated();
+  }
+  window['_editing_'+key] = null;
+  window['_editingData_'+key] = null;
+  pushToast(ok?'success':'error', ok?'Saved.':'Could not save changes.');
+  renderApp();
+  return false;
+}
+async function deleteGeneric(key, id){
+  if(!confirm('Delete this entry? This cannot be undone.')) return;
+  const cfg = SIMPLE_SECTIONS[key];
+  const ok = await dbDelete(cfg.table, id);
+  if(ok){
+    tableData[key] = tableData[key].filter(r=>String(r.id)!==String(id));
+    await touchLastUpdated();
+  }
+  pushToast(ok?'success':'error', ok?'Deleted.':'Could not delete.');
+  renderApp();
+}
+
+function bindGlobalEvents(){
+  window.onhashchange = renderApp;
+  document.onkeydown = (e)=>{
+    if(e.key === 'Escape'){
+      if(lightboxIndex !== null){ closeLightbox(); }
+      else if(navOpen){ closeNav(); }
+    }
+    if(lightboxIndex !== null){
+      if(e.key === 'ArrowRight') navigateLightbox(1);
+      if(e.key === 'ArrowLeft') navigateLightbox(-1);
+    }
+  };
+  if(configOK && dataLoaded && !location.hash.startsWith('#admin')){
+    setupReveal();
+    setupScrollSpy();
+    setupCounters();
+  }
+}
+function setupReveal(){
+  const els = document.querySelectorAll('.reveal:not(.in-view)');
+  if(!('IntersectionObserver' in window)){ els.forEach(el=>el.classList.add('in-view')); return; }
+  const obs = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{ if(entry.isIntersecting){ entry.target.classList.add('in-view'); obs.unobserve(entry.target); } });
+  }, {threshold:0.12});
+  els.forEach(el=>obs.observe(el));
+}
+function setupScrollSpy(){
+  const sections = document.querySelectorAll('main section[id], section.hero#home');
+  const navLinks = document.querySelectorAll('nav.main-nav a[href^="#"]:not(.nav-cta)');
+  if(!sections.length || !navLinks.length || !('IntersectionObserver' in window)) return;
+  const obs = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        const id = '#'+entry.target.id;
+        navLinks.forEach(a=> a.classList.toggle('active', a.getAttribute('href')===id));
+      }
+    });
+  }, {rootMargin:'-45% 0px -50% 0px', threshold:0});
+  sections.forEach(s=>obs.observe(s));
+}
+function setupCounters(){
+  const strip = document.querySelector('.stat-strip');
+  if(!strip || !('IntersectionObserver' in window)) return;
+  const obs = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(!entry.isIntersecting) return;
+      document.querySelectorAll('.stat .num[data-count]').forEach(el=>{
+        const target = parseInt(el.dataset.count,10);
+        const suffix = el.dataset.suffix || '';
+        if(isNaN(target)) return;
+        let cur = 0;
+        const step = Math.max(1, Math.round(target/36));
+        (function tick(){
+          cur += step;
+          if(cur>=target){ el.textContent = target.toLocaleString('en-IN') + suffix; return; }
+          el.textContent = cur.toLocaleString('en-IN');
+          requestAnimationFrame(tick);
+        })();
+      });
+      obs.unobserve(entry.target);
+    });
+  }, {threshold:0.3});
+  obs.observe(strip);
+}
+function toggleNav(){ navOpen = !navOpen; renderApp(); }
+function closeNav(){ if(navOpen){ navOpen = false; renderApp(); } }
+function openLightbox(i){ lightboxIndex = i; renderApp(); }
+function closeLightbox(){ lightboxIndex = null; renderApp(); }
+function navigateLightbox(delta){
+  if(lightboxIndex === null || gallery.length === 0) return;
+  lightboxIndex = (lightboxIndex + delta + gallery.length) % gallery.length;
+  renderApp();
+}
+async function setAdminTab(tab){
+  adminTab = tab;
+  window._editingCourse = null; window._editingCourseData = null;
+  window._editingFaculty = null; window._editingFacultyData = null;
+  window._editingNotice = null; window._editingNoticeData = null;
+  renderApp();
+  if(tab === 'enquiries'){
+    tableData.enquiries = await dbSelectList('enquiries','created_at',false);
+    if(adminTab === 'enquiries') renderApp();
+  }
+}
+
+async function handleSaveInfo(e){
+  e.preventDefault();
+  const f = e.target;
+  const payload = {
+    name: f.name.value.trim(), short_name: f.short_name.value.trim() || 'VEG',
+    tagline: f.tagline.value.trim(), established: f.established.value.trim(),
+    placement_rate: f.placement_rate.value.trim(), students: f.students.value.trim(),
+    phone: f.phone.value.trim(), email: f.email.value.trim(), address: f.address.value.trim(),
+    map_url: f.map_url.value.trim(),
+    affiliation: f.affiliation.value.trim(), approval_id: f.approval_id.value.trim(),
+    facebook_url: f.facebook_url.value.trim(), instagram_url: f.instagram_url.value.trim(), youtube_url: f.youtube_url.value.trim(),
+    logo_url: window._pendingLogo || info.logo_url
+  };
+  const ok = await dbUpdateSingleton('college_info', payload);
+  if(ok){ info = {...info, ...payload}; await touchLastUpdated(); injectStructuredData(); }
+  window._pendingLogo = null;
+  pushToast(ok?'success':'error', ok?'Institution details saved.':'Could not save changes.');
+  renderApp();
+  return false;
+}
+async function handleLogoPick(e){
+  const file = e.target.files[0];
+  if(!file) return;
+  const statusEl = document.getElementById('logoStatus');
+  if(statusEl) statusEl.textContent = 'Uploading...';
+  try{
+    const url = await uploadToStorage(file, 'branding', {maxDim:300, quality:0.85});
+    window._pendingLogo = url;
+    const img = document.getElementById('logoPreview');
+    img.src = url; img.style.display = 'block';
+    if(statusEl) statusEl.textContent = 'Photo ready — click "Save changes" below to apply it.';
+  }catch(err){
+    if(statusEl) statusEl.textContent = err.message || 'Upload failed.';
+  }
+}
+
+async function handleSaveAbout(e){
+  e.preventDefault();
+  const f = e.target;
+  const payload = {
+    vision: f.vision.value.trim(), mission: f.mission.value.trim()
+  };
+  const ok = await dbUpdateSingleton('about_info', payload);
+  if(ok){ about = {...about, ...payload}; await touchLastUpdated(); }
+  pushToast(ok?'success':'error', ok?'About section saved.':'Could not save changes.');
+  renderApp();
+  return false;
+}
+
+function openEditCourse(id){
+  const c = courses.find(x=>String(x.id)===String(id));
+  if(!c) return;
+  window._editingCourse = id; window._editingCourseData = {...c};
+  renderApp();
+}
+function cancelEditCourse(){ window._editingCourse = null; window._editingCourseData = null; renderApp(); }
+async function handleSaveCourse(e){
+  e.preventDefault();
+  const f = e.target;
+  const payload = {
+    code: f.code.value.trim().toUpperCase(), name: f.name.value.trim(),
+    duration: f.duration.value.trim() || '3 Years', seats: parseInt(f.seats.value,10) || 0,
+    description: f.description.value.trim()
+  };
+  const editingId = window._editingCourse;
+  const ok = editingId ? await dbUpdate('courses', editingId, payload) : !!(await dbInsert('courses', payload));
+  if(ok){ courses = await dbSelectList('courses','created_at',true); await touchLastUpdated(); }
+  window._editingCourse = null; window._editingCourseData = null;
+  pushToast(ok?'success':'error', ok?'Course saved.':'Could not save changes.');
+  renderApp();
+  return false;
+}
+async function deleteCourse(id){
+  if(!confirm('Delete this course? This cannot be undone.')) return;
+  const ok = await dbDelete('courses', id);
+  if(ok){ courses = courses.filter(c=>String(c.id)!==String(id)); await touchLastUpdated(); }
+  pushToast(ok?'success':'error', ok?'Course deleted.':'Could not delete.');
+  renderApp();
+}
+
+function openEditFaculty(id){
+  const f = faculty.find(x=>String(x.id)===String(id));
+  if(!f) return;
+  window._editingFaculty = id; window._editingFacultyData = {...f};
+  renderApp();
+}
+function cancelEditFaculty(){ window._editingFaculty = null; window._editingFacultyData = null; renderApp(); }
+async function handleFacultyPhotoPick(e){
+  const file = e.target.files[0];
+  if(!file) return;
+  const statusEl = document.getElementById('facultyPhotoStatus');
+  if(statusEl) statusEl.textContent = 'Uploading...';
+  try{
+    const url = await uploadToStorage(file, 'faculty', {maxDim:300, quality:0.8});
+    window._editingFacultyData = {...(window._editingFacultyData||{}), photo_url: url};
+    const img = document.getElementById('facultyPhotoPreview');
+    if(img){ img.src = url; img.style.display = 'block'; }
+    if(statusEl) statusEl.textContent = 'Uploaded.';
+  }catch(err){
+    if(statusEl) statusEl.textContent = err.message || 'Upload failed.';
+  }
+}
+async function handleSaveFaculty(e){
+  e.preventDefault();
+  const f = e.target;
+  const payload = {
+    name: f.name.value.trim(), designation: f.designation.value.trim(),
+    department: f.department.value.trim(), qualification: f.qualification.value.trim(),
+    photo_url: (window._editingFacultyData && window._editingFacultyData.photo_url) || ''
+  };
+  const editingId = window._editingFaculty;
+  const ok = editingId ? await dbUpdate('faculty', editingId, payload) : !!(await dbInsert('faculty', payload));
+  if(ok){ faculty = await dbSelectList('faculty','created_at',true); await touchLastUpdated(); }
+  window._editingFaculty = null; window._editingFacultyData = null;
+  pushToast(ok?'success':'error', ok?'Faculty profile saved.':'Could not save changes.');
+  renderApp();
+  return false;
+}
+async function deleteFaculty(id){
+  if(!confirm('Remove this faculty member? This cannot be undone.')) return;
+  const ok = await dbDelete('faculty', id);
+  if(ok){ faculty = faculty.filter(x=>String(x.id)!==String(id)); await touchLastUpdated(); }
+  pushToast(ok?'success':'error', ok?'Faculty member removed.':'Could not delete.');
+  renderApp();
+}
+
+function openEditNotice(id){
+  const n = notices.find(x=>String(x.id)===String(id));
+  if(!n) return;
+  window._editingNotice = id; window._editingNoticeData = {...n};
+  renderApp();
+}
+function cancelEditNotice(){ window._editingNotice = null; window._editingNoticeData = null; renderApp(); }
+async function handleNoticePdfPick(e){
+  const file = e.target.files[0];
+  if(!file) return;
+  const statusEl = document.getElementById('noticePdfStatus');
+  if(statusEl) statusEl.textContent = 'Uploading...';
+  try{
+    const url = await uploadToStorage(file, 'notices', {isPdf:true});
+    window._pendingNoticePdf = url;
+    if(statusEl) statusEl.textContent = 'PDF ready — click "Post notice" / "Save notice" below to apply it.';
+  }catch(err){
+    if(statusEl) statusEl.textContent = err.message || 'Upload failed.';
+  }
+}
+async function handleSaveNotice(e){
+  e.preventDefault();
+  const f = e.target;
+  const payload = {
+    title: f.title.value.trim(), notice_date: f.notice_date.value || new Date().toISOString().slice(0,10),
+    content: f.content.value.trim(), important: !!f.important.checked,
+    pdf_url: window._pendingNoticePdf || (window._editingNoticeData && window._editingNoticeData.pdf_url) || null
+  };
+  const editingId = window._editingNotice;
+  const ok = editingId ? await dbUpdate('notices', editingId, payload) : !!(await dbInsert('notices', payload));
+  if(ok){ notices = await dbSelectList('notices','notice_date',false); await touchLastUpdated(); }
+  window._editingNotice = null; window._editingNoticeData = null; window._pendingNoticePdf = null;
+  pushToast(ok?'success':'error', ok?'Notice saved.':'Could not save changes.');
+  renderApp();
+  return false;
+}
+async function deleteNotice(id){
+  if(!confirm('Delete this notice?')) return;
+  const ok = await dbDelete('notices', id);
+  if(ok){ notices = notices.filter(x=>String(x.id)!==String(id)); await touchLastUpdated(); }
+  pushToast(ok?'success':'error', ok?'Notice deleted.':'Could not delete.');
+  renderApp();
+}
+
+async function handleGalleryPhotoPick(e){
+  const file = e.target.files[0];
+  if(!file) return;
+  const statusEl = document.getElementById('galleryPhotoStatus');
+  if(statusEl) statusEl.textContent = 'Uploading...';
+  try{
+    const url = await uploadToStorage(file, 'gallery', {maxDim:900, quality:0.75});
+    window._pendingGalleryPhoto = url;
+    const img = document.getElementById('galleryPhotoPreview');
+    img.src = url; img.style.display = 'block';
+    if(statusEl) statusEl.textContent = 'Uploaded — add a caption and click "Add photo".';
+  }catch(err){
+    if(statusEl) statusEl.textContent = err.message || 'Upload failed.';
+  }
+}
+async function handleAddGalleryPhoto(e){
+  e.preventDefault();
+  if(!window._pendingGalleryPhoto){ pushToast('error','Choose a photo first.'); renderApp(); return false; }
+  const caption = e.target.caption.value.trim();
+  const inserted = await dbInsert('gallery', {photo_url: window._pendingGalleryPhoto, caption});
+  if(inserted){ gallery = await dbSelectList('gallery','created_at',false); await touchLastUpdated(); }
+  window._pendingGalleryPhoto = null;
+  pushToast(inserted?'success':'error', inserted?'Photo added to gallery.':'Could not save changes.');
+  renderApp();
+  return false;
+}
+async function deleteGalleryItem(id){
+  if(!confirm('Delete this photo?')) return;
+  const ok = await dbDelete('gallery', id);
+  if(ok){ gallery = gallery.filter(g=>String(g.id)!==String(id)); await touchLastUpdated(); }
+  pushToast(ok?'success':'error', ok?'Photo deleted.':'Could not delete.');
+  renderApp();
+}
+
+/* ---- Public enquiry form ---- */
+async function handleSubmitEnquiry(e){
+  e.preventDefault();
+  const f = e.target;
+  const payload = {
+    name: f.name.value.trim(),
+    phone: f.phone.value.trim(),
+    email: f.email.value.trim(),
+    course_interested: f.course_interested.value,
+    message: f.message.value.trim(),
+    status: 'new'
+  };
+  const inserted = await dbInsert('enquiries', payload);
+  pushToast(inserted?'success':'error', inserted?"Thank you! We've received your enquiry and will get back to you soon.":'Could not send your enquiry right now. Please try calling or emailing us directly.');
+  renderApp();
+  return false;
+}
+
+/* ---- Admin: Enquiries ---- */
+async function markEnquiryContacted(id){
+  const ok = await dbUpdate('enquiries', id, {status:'contacted'});
+  if(ok){ tableData.enquiries = (tableData.enquiries||[]).map(en => String(en.id)===String(id) ? {...en, status:'contacted'} : en); }
+  pushToast(ok?'success':'error', ok?'Marked as contacted.':'Could not update.');
+  renderApp();
+}
+async function deleteEnquiry(id){
+  if(!confirm('Delete this enquiry? This cannot be undone.')) return;
+  const ok = await dbDelete('enquiries', id);
+  if(ok){ tableData.enquiries = (tableData.enquiries||[]).filter(en=>String(en.id)!==String(id)); }
+  pushToast(ok?'success':'error', ok?'Deleted.':'Could not delete.');
+  renderApp();
+}
+
+initSupabase();
+(async function init(){
+  renderApp();
+  if(configOK){
+    await loadAll();
+    renderApp();
+  }
+})();
+</script>
+</body>
+</html>
