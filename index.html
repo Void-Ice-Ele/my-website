@@ -120,11 +120,10 @@
   .section-head{max-width:640px;margin-bottom:40px;}
   .section-head p{color:var(--ink-soft);font-size:15.5px;}
 
-  .quicklinks-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;}
+  .quicklinks-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:14px;}
   .quicklink-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px 10px;text-align:center;text-decoration:none;color:var(--navy);font-size:12px;font-weight:700;box-shadow:var(--shadow);transition:transform .2s ease, box-shadow .2s ease;}
   .quicklink-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);}
   .quicklink-card svg{width:24px;height:24px;margin:0 auto 8px;display:block;color:var(--brick);}
-  @media (max-width:880px){.quicklinks-grid{grid-template-columns:repeat(3,1fr);}}
   @media (max-width:520px){.quicklinks-grid{grid-template-columns:repeat(2,1fr);}}
 
   .leader-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
@@ -173,6 +172,14 @@
   .admit-eligibility{margin-top:26px;font-size:14.5px;color:#D9E1EE;max-width:640px;}
   @media (max-width:880px){.timeline{grid-template-columns:repeat(2,1fr);} .admissions{padding:28px 20px;}}
 
+  .fee-table-wrap{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow-x:auto;box-shadow:var(--shadow);}
+  .fee-table{width:100%;border-collapse:collapse;min-width:480px;}
+  .fee-table th{text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);background:var(--paper);padding:14px 20px;border-bottom:1px solid var(--line);}
+  .fee-table td{padding:14px 20px;font-size:14.5px;border-bottom:1px solid var(--line);}
+  .fee-table tr:last-child td{border-bottom:none;}
+  .fee-table td:first-child{font-weight:700;color:var(--navy);}
+  .fee-table td:nth-child(2),.fee-table td:nth-child(3){font-family:'Lora',serif;font-weight:600;}
+  .fee-note-row td{padding:0 20px 14px;font-size:12.5px;color:var(--ink-soft);font-style:italic;border-bottom:1px solid var(--line);}
   .cal-list{display:flex;flex-direction:column;gap:12px;}
   .cal-row{display:flex;align-items:center;gap:18px;background:#fff;border:1px solid var(--line);border-left:4px solid var(--ink-soft);border-radius:4px;padding:14px 18px;flex-wrap:wrap;}
   .cal-date{font-weight:700;color:var(--navy);font-size:13.5px;min-width:170px;}
@@ -228,6 +235,8 @@
   .notice-card p{font-size:13px;color:var(--ink-soft);margin:0;}
   .notice-important{display:inline-block;background:var(--brick);color:#fff;font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:2px 8px;border-radius:2px;margin-bottom:6px;}
   .notice-pdf-link{display:inline-block;margin-top:8px;font-size:12.5px;font-weight:700;color:var(--brick);text-decoration:underline;}
+  .source-badge{display:inline-block;margin-top:6px;font-size:11px;font-weight:700;color:var(--ink-soft);background:var(--paper-dark);padding:2px 8px;border-radius:3px;text-decoration:none;}
+  a.source-badge:hover{color:var(--brick);}
   @media (max-width:880px){.notice-grid{grid-template-columns:1fr 1fr;}}
   @media (max-width:560px){.notice-grid{grid-template-columns:1fr;}}
 
@@ -363,6 +372,7 @@
 const SUPABASE_URL = "https://mtvhzualkjrpbrwxvfbn.supabase.co";
 const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im10dmh6dWFsa2pycGJyd3h2ZmJuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODM0MTg2MjUsImV4cCI6MjA5ODk5NDYyNX0.xSj0-PZfuTHWK3zpUSAJT-3X-zYIwAXqX0p658QpGG4";
 const STORAGE_BUCKET = "college-assets";
+
 /* ============================================================
    VIDYA EDUCATION GROUP — public site + admin CMS
    Backed entirely by Supabase: Postgres for data, Supabase Auth
@@ -402,7 +412,8 @@ const ICONS = {
   enquiries: '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5.5h14v9H8l-3.5 3v-3H3z"/><path d="M6.5 8.5h7M6.5 11h4.5"/></svg>',
   facebook: '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="7.3"/><path d="M11.8 7.2h-1.3c-.7 0-1.2.5-1.2 1.2v1.3H8.2v1.8h1.1V16h1.9v-4.5h1.4l.2-1.8h-1.6V8.6c0-.3.2-.5.5-.5h1.1V7.2Z" fill="currentColor" stroke="none"/></svg>',
   instagram: '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="13" height="13" rx="3.5"/><circle cx="10" cy="10" r="3"/><circle cx="13.6" cy="6.4" r=".6" fill="currentColor" stroke="none"/></svg>',
-  youtube: '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5.5" width="15" height="9" rx="2.5"/><path d="M8.5 8.3v3.4l3-1.7-3-1.7Z" fill="currentColor" stroke="none"/></svg>'
+  youtube: '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5.5" width="15" height="9" rx="2.5"/><path d="M8.5 8.3v3.4l3-1.7-3-1.7Z" fill="currentColor" stroke="none"/></svg>',
+  fees: '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3.5h10v13l-1.8-1.2-1.7 1.2-1.7-1.2-1.6 1.2-1.7-1.2L5 16.5Z"/><path d="M7.3 7h5.4M7.3 9.7h5.4M7.3 12.4h3"/></svg>'
 };
 
 const SIMPLE_SECTIONS = {
@@ -419,6 +430,8 @@ const SIMPLE_SECTIONS = {
       {name:'event_date', label:'Start date', type:'date', required:true},
       {name:'end_date', label:'End date (optional)', type:'date'},
       {name:'category', label:'Category', type:'select', options:['Exam','Holiday','Admission','Event','Other']},
+      {name:'source', label:'Source', type:'select', options:['Internal','AICTE','SBTE','Other']},
+      {name:'source_url', label:'Link to official notice (optional)', type:'text', placeholder:'https://...'},
       {name:'description', label:'Details', type:'textarea'}
     ], file:{name:'pdf_url', label:'Attachment PDF (optional)', kind:'pdf'} },
   recruiters: { table:'recruiters', icon:'placements', label:'Placements & Recruiters', orderCol:'sort_order', ascending:true,
@@ -455,7 +468,14 @@ const SIMPLE_SECTIONS = {
       {name:'title', label:'Title / role', type:'text', required:true, placeholder:'e.g. Principal, Director, Secretary'},
       {name:'message', label:'Message', type:'textarea', required:true, placeholder:"Their message to students and visitors"},
       {name:'sort_order', label:'Display order (lower shows first)', type:'number'}
-    ], file:{name:'photo_url', label:'Photo', kind:'image'} }
+    ], file:{name:'photo_url', label:'Photo', kind:'image'} },
+  fees: { table:'fees', icon:'fees', label:'Fee Structure', orderCol:'created_at', ascending:true,
+    fields:[
+      {name:'course_name', label:'Course / branch', type:'text', required:true, placeholder:'e.g. Civil Engineering (CE)'},
+      {name:'fee_without_hostel', label:'Annual fee - without hostel', type:'text', required:true, placeholder:'e.g. ₹45,000'},
+      {name:'fee_with_hostel', label:'Annual fee - with hostel', type:'text', placeholder:'e.g. ₹68,000'},
+      {name:'notes', label:'Notes (optional)', type:'textarea', placeholder:'e.g. Payable in two instalments'}
+    ], file:null }
 };
 
 let sb = null;
@@ -469,7 +489,7 @@ let courses = [];
 let faculty = [];
 let notices = [];
 let gallery = [];
-let tableData = { results:[], calendar_events:[], recruiters:[], downloads:[], committees:[], testimonials:[], achievements:[], leadership:[], enquiries:[] };
+let tableData = { results:[], calendar_events:[], recruiters:[], downloads:[], committees:[], testimonials:[], achievements:[], leadership:[], enquiries:[], fees:[] };
 let siteMeta = { lastUpdated:null };
 
 let session = { isAdmin:false };
@@ -643,7 +663,7 @@ async function handleChangePassword(e){
 
 async function loadAll(){
   dbErrors = [];
-  const [ci, ab, co, fa, no, ga, re, ca, rc, dl, cm, te, ac, ld] = await Promise.all([
+  const [ci, ab, co, fa, no, ga, re, ca, rc, dl, cm, te, ac, ld, fe] = await Promise.all([
     dbSelectSingleton('college_info'),
     dbSelectSingleton('about_info'),
     dbSelectList('courses','created_at',true),
@@ -657,12 +677,13 @@ async function loadAll(){
     dbSelectList('committees','created_at',true),
     dbSelectList('testimonials','created_at',false),
     dbSelectList('achievements','year',false),
-    dbSelectList('leadership','sort_order',true)
+    dbSelectList('leadership','sort_order',true),
+    dbSelectList('fees','created_at',true)
   ]);
   info = ci || structuredClone(DEFAULT_INFO);
   about = ab || structuredClone(DEFAULT_ABOUT);
   courses = co; faculty = fa; notices = no; gallery = ga;
-  tableData = { results:re, calendar_events:ca, recruiters:rc, downloads:dl, committees:cm, testimonials:te, achievements:ac, leadership:ld };
+  tableData = { results:re, calendar_events:ca, recruiters:rc, downloads:dl, committees:cm, testimonials:te, achievements:ac, leadership:ld, fees:fe };
   await checkSession();
   dataLoaded = true;
   injectStructuredData();
@@ -791,6 +812,7 @@ function renderPublicSite(){
     ${renderCourses()}
     ${renderAdmissions()}
     ${renderLateralEntry()}
+    ${renderFees()}
     ${renderCalendar()}
     ${renderPlacements()}
     ${renderTestimonials()}
@@ -881,7 +903,7 @@ function renderHero(){
       </div>
       <div class="hero-seal-wrap reveal in-view">
         <div class="corner-mark tl"></div><div class="corner-mark tr"></div><div class="corner-mark bl"></div><div class="corner-mark br"></div>
-        <div class="seal seal-spin" style="color:var(--marigold);">${sealSVG(esc(info.short_name||'VEG'))}</div>
+        <div class="seal seal-spin" style="color:var(--marigold);">${info.logo_url ? `<img src="${info.logo_url}" alt="${esc(info.short_name)} logo" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">` : sealSVG(esc(info.short_name||'VEG'))}</div>
       </div>
     </div>
     <div class="stat-strip">
@@ -898,6 +920,7 @@ function renderHero(){
 
 function renderQuickLinks(){
   const links = [
+    {href:'#fees-section', label:'Fee Structure', icon:'fees'},
     {href:'#calendar-section', label:'Academic Calendar', icon:'calendar'},
     {href:'#results-section', label:'Results', icon:'results'},
     {href:'#notices-section', label:'Notices', icon:'notices'},
@@ -1017,13 +1040,39 @@ function renderLateralEntry(){
   </section>`;
 }
 
+function renderFees(){
+  const items = tableData.fees || [];
+  const rows = items.map(f=>`
+    <tr>
+      <td>${esc(f.course_name)}</td>
+      <td>${esc(f.fee_without_hostel)}</td>
+      <td>${f.fee_with_hostel ? esc(f.fee_with_hostel) : '&mdash;'}</td>
+    </tr>${f.notes ? `<tr class="fee-note-row"><td colspan="3">${esc(f.notes)}</td></tr>` : ''}`).join('');
+  return `
+  <section id="fees-section" style="background:var(--paper-dark);">
+    <div class="container">
+      <div class="section-head reveal"><span class="eyebrow">Admissions</span><h2>Fee Structure</h2><p>Annual fees by branch, with and without hostel accommodation.</p></div>
+      ${items.length ? `
+      <div class="fee-table-wrap reveal">
+        <table class="fee-table">
+          <thead><tr><th>Course</th><th>Without Hostel (per year)</th><th>With Hostel (per year)</th></tr></thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>` : '<p>Fee structure will appear here once added from the Admin Panel.</p>'}
+    </div>
+  </section>`;
+}
+
 function renderCalendar(){
   const events = tableData.calendar_events || [];
   const catColor = {Exam:'var(--brick)', Holiday:'var(--leaf)', Admission:'var(--marigold-dark)', Event:'var(--navy)', Other:'var(--ink-soft)'};
   const rows = events.map((e,i)=>`
     <div class="cal-row reveal" style="transition-delay:${i*40}ms;border-left-color:${catColor[e.category]||'var(--ink-soft)'};">
       <div class="cal-date">${fmtDate(e.event_date)}${e.end_date?(' &ndash; '+fmtDate(e.end_date)):''}</div>
-      <div class="cal-body"><div class="cal-title">${esc(e.title)}</div>${e.description?`<div class="cal-desc">${esc(e.description)}</div>`:''}${e.pdf_url?`<a class="notice-pdf-link" href="${e.pdf_url}" target="_blank" rel="noopener">View attached PDF</a>`:''}</div>
+      <div class="cal-body"><div class="cal-title">${esc(e.title)}</div>${e.description?`<div class="cal-desc">${esc(e.description)}</div>`:''}
+        ${e.pdf_url?`<a class="notice-pdf-link" href="${e.pdf_url}" target="_blank" rel="noopener">View attached PDF</a>`:''}
+        ${e.source && e.source!=='Internal' ? (e.source_url ? `<a class="source-badge" href="${esc(e.source_url)}" target="_blank" rel="noopener">via ${esc(e.source)} ↗</a>` : `<span class="source-badge">via ${esc(e.source)}</span>`) : ''}
+      </div>
       <div class="cal-tag" style="background:${catColor[e.category]||'var(--ink-soft)'};">${esc(e.category||'Event')}</div>
     </div>`).join('');
   return `
@@ -1096,6 +1145,7 @@ function renderNotices(){
       <h4>${esc(n.title)}</h4>
       <p>${esc(n.content)}</p>
       ${n.pdf_url ? `<a class="notice-pdf-link" href="${n.pdf_url}" target="_blank" rel="noopener">View attached PDF</a>` : ''}
+      ${n.source && n.source!=='Internal' ? (n.source_url ? `<a class="source-badge" href="${esc(n.source_url)}" target="_blank" rel="noopener">via ${esc(n.source)} ↗</a>` : `<span class="source-badge">via ${esc(n.source)}</span>`) : ''}
     </div>`).join('');
   return `
   <section id="notices-section">
@@ -1274,7 +1324,7 @@ function renderAdminLogin(){
   return `
   <div class="login-page">
     <div class="login-card">
-      <div class="seal" style="color:var(--brick);">${sealSVG(esc(info.short_name||'VEG'))}</div>
+      <div class="seal" style="color:var(--brick);">${info.logo_url ? `<img src="${info.logo_url}" alt="${esc(info.short_name)} logo" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">` : sealSVG(esc(info.short_name||'VEG'))}</div>
       <h3>Staff Login</h3>
       <p class="sub" style="color:var(--ink-soft);font-size:13.5px;margin-bottom:20px;">Sign in to edit the college website.</p>
       <form onsubmit="return handleLogin(event)">
@@ -1299,6 +1349,7 @@ function renderAdminDashboard(){
     ['faculty','Faculty','faculty'],
     ['notices','Notices','notices'],
     ['results','Results','results'],
+    ['fees','Fee Structure','fees'],
     ['calendar_events','Academic Calendar','calendar'],
     ['gallery','Gallery','gallery'],
     ['recruiters','Placements & Recruiters','placements'],
@@ -1488,6 +1539,15 @@ function renderAdminNotices(){
           </label>
         </div>
         <div class="field full"><label>Details</label><textarea name="content">${esc(ed?.content||'')}</textarea></div>
+        <div class="field"><label>Source</label>
+          <select name="source">
+            <option value="Internal" ${(!ed?.source||ed?.source==='Internal')?'selected':''}>Internal</option>
+            <option value="AICTE" ${ed?.source==='AICTE'?'selected':''}>AICTE</option>
+            <option value="SBTE" ${ed?.source==='SBTE'?'selected':''}>SBTE</option>
+            <option value="Other" ${ed?.source==='Other'?'selected':''}>Other</option>
+          </select>
+        </div>
+        <div class="field"><label>Link to official notice (optional)</label><input name="source_url" value="${esc(ed?.source_url||'')}" placeholder="https://..."></div>
       </div>
       <div class="field">
         <label>Attach a PDF (optional — e.g. a detailed circular)</label>
@@ -1572,6 +1632,7 @@ function genericTitle(key, r){
   if(key==='testimonials') return r.name;
   if(key==='achievements') return r.title;
   if(key==='leadership') return r.name;
+  if(key==='fees') return r.course_name;
   return r.title;
 }
 function genericSubtitle(key, r){
@@ -1583,6 +1644,7 @@ function genericSubtitle(key, r){
   if(key==='testimonials') return r.role || '';
   if(key==='achievements') return r.year || '';
   if(key==='leadership') return r.title || '';
+  if(key==='fees') return [r.fee_without_hostel?('Without hostel: '+r.fee_without_hostel):null, r.fee_with_hostel?('With hostel: '+r.fee_with_hostel):null].filter(Boolean).join(' · ');
   return '';
 }
 
@@ -1954,6 +2016,7 @@ async function handleSaveNotice(e){
   const payload = {
     title: f.title.value.trim(), notice_date: f.notice_date.value || new Date().toISOString().slice(0,10),
     content: f.content.value.trim(), important: !!f.important.checked,
+    source: f.source.value, source_url: f.source_url.value.trim(),
     pdf_url: window._pendingNoticePdf || (window._editingNoticeData && window._editingNoticeData.pdf_url) || null
   };
   const editingId = window._editingNotice;
